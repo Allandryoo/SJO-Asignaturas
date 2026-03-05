@@ -1,6 +1,5 @@
 import random
 
-
 class Pokemon:
     def __init__(self, nombre, tipo, ataque, defensa):
         self.nombre = nombre
@@ -90,6 +89,9 @@ class Mapa:
         self.lado = lado
         self.mapa = []
 
+    def Set_lado(self, newlado):
+        self.lado = newlado
+
     def generar_mapa(self):
         for y in range(1, self.lado+1):
             for x in range(1, self.lado+1):
@@ -114,11 +116,15 @@ class Mapa:
 
     def añadir_pokemons(self):
         for i in self.mapa:
-            if i[0] == None and random.randint(0, 1) == random.randint(0, 1):
+            if i[0] == None and random.randint(0, 100) == random.randint(0, 100):
                 if i[1][0] == 1 and i[1][1] == 1:
                     i[0] = None
                 else:
                     i[0] = almacen[random.randint(0, len(almacen)-1)]
+
+    def hay_pokemon(self):
+        comprobar = [none for none in self.mapa if none[0] != None]
+        return comprobar
 
 
 class Personaje:
@@ -272,34 +278,40 @@ def combate_pokemon(mipokemon, pokemonsalvaje):
         match luchar.lower():
 
             case "a":
-                if miataque >= enemydef:
-                    enemypsactual = enemypsactual - (miataque - enemydef)
-                    print(f"{mipokemon.get_nombre()} ataca.")
-                    print(
-                        f"{mipokemon.get_nombre()} ha hecho {miataque-enemydef} de daño.")
-                    enemydef = 0
+                if random.randint(0,1) == 0:
+                    if miataque >= enemydef:
+                        enemypsactual = enemypsactual - (miataque - enemydef)
+                        print(f"{mipokemon.get_nombre()} ataca.")
+                        print(
+                            f"{mipokemon.get_nombre()} ha hecho {miataque-enemydef} de daño.")
+                        enemydef = 0
+                    else:
+                        print(f"{mipokemon.get_nombre()} ataca.")
+                        print(
+                            f"{mipokemon.get_nombre()} ha quitado {miataque} de defensa.")
+                        enemydef = enemydef - miataque
                 else:
-                    print(f"{mipokemon.get_nombre()} ataca.")
-                    print(
-                        f"{mipokemon.get_nombre()} ha quitado {miataque} de defensa.")
-                    enemydef = enemydef - miataque
+                    print(f"{mipokemon.get_nombre()} ataca y falla.")
 
                 if enemypsactual <= 0:
                     print(f"{pokemonsalvaje.get_nombre()} ha muerto.")
                     return True
-
+                
                 print(f"Turno de {pokemonsalvaje.get_nombre()}")
-                if enemyataque >= midef:
-                    mipsactual = mipsactual - (enemyataque - midef)
-                    print(f"{pokemonsalvaje.get_nombre()} ataca.")
-                    print(
-                        f"{pokemonsalvaje.get_nombre()} hace {enemyataque - midef} de daño.\n")
-                    midef = 0
+                if random.randint(0,2) == 0:
+                    if enemyataque >= midef:
+                        mipsactual = mipsactual - (enemyataque - midef)
+                        print(f"{pokemonsalvaje.get_nombre()} ataca.")
+                        print(
+                            f"{pokemonsalvaje.get_nombre()} hace {enemyataque - midef} de daño.\n")
+                        midef = 0
+                    else:
+                        print(f"{pokemonsalvaje.get_nombre()} ataca.")
+                        print(
+                            f"{pokemonsalvaje.get_nombre()} ha quitado {enemyataque} de defensa.")
+                        midef = (midef - enemyataque)
                 else:
-                    print(f"{pokemonsalvaje.get_nombre()} ataca.")
-                    print(
-                        f"{pokemonsalvaje.get_nombre()} ha quitado {enemyataque} de defensa.")
-                    midef = (midef - enemyataque)
+                    print(f"{pokemonsalvaje.get_nombre()} ataca y falla.")
 
                 if mipsactual <= 0:
                     print(f"Tu pokemon {mipokemon.get_nombre()} a muerto\n")
@@ -319,6 +331,22 @@ def combate_pokemon(mipokemon, pokemonsalvaje):
                 mipokemon.set_ps(mipsactual)
                 return True
 
+def sin_pokemon():
+    print("Has matado a todos los pokemons.\n")
+    seguir = input("¿Quieres jugar de nuevo?")
+
+    match seguir.lower():
+
+        case "s":
+            lado=int(input("Indica el tamaño del mapa:\n"))
+            mapa_pokemon.Set_lado(lado)
+            mapa_pokemon.mapa = []
+            mapa_pokemon.generar_mapa()
+            mapa_pokemon.pokemon_mapa(almacen[10],2,2)
+            mapa_pokemon.añadir_pokemons()
+
+        case "n":
+            return False
 
 opciones = {
     "W": "Mover arriba.",
@@ -330,9 +358,9 @@ opciones = {
 }
 almacen = []
 
-with open(r"UD4\Pokemon\pokemons.txt") as lista_pokemons:
+with open(r"Programacion\UD4\Pokemon\pokemons.txt") as lista_pokemons:
     for contenedor_texto in lista_pokemons:
-        contenedor_texto = contenedor_texto.strip()
+        contenedorS_texto = contenedor_texto.strip()
         pokemon = procesar_linea(contenedor_texto)
         almacen.append(pokemon)
 
@@ -345,6 +373,12 @@ p1 = Jugador(1, 1, "alan")
 salir = True
 
 while salir:
+    if len(mapa_pokemon.hay_pokemon()) == 0:
+        sin = sin_pokemon()
+        if sin == False:
+            break
+
+
     mapa_pokemon.mostrar_mapa()
     print("")
     print(f"{p1.nombre}(x:{p1.x},y:{p1.y}) | Total pokemons: {len(p1.inventario)}\n")
@@ -354,7 +388,11 @@ while salir:
 
     print("")
 
-    move = input("Que quieres hacer?\n")
+        
+    while True:
+        move = input("Que quieres hacer?\n")
+        if move == "w" or move == "d" or move == "s" or move == "a" or move == "i" or move == "l":
+            break
 
     match move.lower():
 
@@ -379,9 +417,6 @@ while salir:
                 print("")
         case "l":
             p1.llamar_pokemon()
-
-        case _:
-            print("Opcion erronea")
 
     for i in mapa_pokemon.mapa:
 

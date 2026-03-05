@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Map<String, List<String>> Diccionario = new HashMap<>();
+
+        String[] palabras = {"Arbol", "Astronomía", "Algoritmo", "Abaco", "Alianza",
+                "Barco", "Biología", "Brújula", "Binario", "Ballena",
+                "Cielo", "Código", "Ciencia", "Computadora", "Cristal",
+                "Dado", "Dinosaurio", "Delfín", "Datos", "Diamante",
+                "Estrella", "Energía", "Espejo", "Elefante", "Enigma",
+                "Fuego", "Física", "Fuente", "Flecha", "Fénix",
+                "Galaxia", "Globo", "Gato", "Gravedad", "Guitarra",
+                "Hierro", "Horizonte", "Hielo", "Historia", "Hormiga",
+                "Isla", "Idea", "Infinito", "Iguana", "Imagen",
+                "Jardín", "Juego", "Júpiter", "Joya", "Jirafa"};
+
+        for (String l : palabras) {
+            String primeraletra = String.valueOf(l.charAt(0)).toUpperCase();
+            if (!Diccionario.containsKey(primeraletra)) {
+                Diccionario.put(primeraletra, new ArrayList<>());
+            }
+
+            Diccionario.get(primeraletra).add(l);
+        }
+
+        System.out.println(Diccionario);
+    }
+}

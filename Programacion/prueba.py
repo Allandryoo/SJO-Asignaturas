@@ -1,22 +1,9 @@
-Diccionario = {}
+listas = ["nin", "nin","nin", "nin", "nin"]
 
-palabras = ["Arbol", "Astronomía", "Algoritmo", "Abaco", "Alianza",
-            "Barco", "Biología", "Brújula", "Binario", "Ballena",
-            "Cielo", "Código", "Ciencia", "Computadora", "Cristal",
-            "Dado", "Dinosaurio", "Delfín", "Datos", "Diamante",
-            "Estrella", "Energía", "Espejo", "Elefante", "Enigma",
-            "Fuego", "Física", "Fuente", "Flecha", "Fénix",
-            "Galaxia", "Globo", "Gato", "Gravedad", "Guitarra",
-            "Hierro", "Horizonte", "Hielo", "Historia", "Hormiga",
-            "Isla", "Idea", "Infinito", "Iguana", "Imagen",
-            "Jardín", "Juego", "Júpiter", "Joya", "Jirafa"]
+comprobar = [none for none in listas if none == None]
 
+if len(comprobar) == 0:
+    print("No hay")
 
-for l in palabras:
-    primeraletra = l[0].upper()
-    if primeraletra not in Diccionario:
-        Diccionario[primeraletra] = []
-
-    Diccionario[primeraletra].append(l)
-
-print(Diccionario)
+else:
+    print("Hay")
