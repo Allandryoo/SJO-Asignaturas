@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Fiscales</title>
+</head>
+<body>
+    <form>
+    <fieldset>
+        <legend>Datos Fiscales</legend>
+
+        <input type="checkbox" id="datos_fiscales" name="datos_fiscales" value="en paro">
+        <label for="datos_fiscales">En paro</label>
+        <br>
+        <input type="checkbox" id="datos_fiscales" name="datos_fiscales" value="autonomo">
+        <label for="datos_fiscales">Autonomo</label>
+        <br>
+        <input type="checkbox" id="datos_fiscales" name="datos_fiscales" value="por ajena">
+        <label for="datos_fiscales">Por c.ajena</label>
+    </fieldset>
+<br>
+        <fieldset>
+            <legend>Satisfaccion</legend>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+<br>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos">
+<br>
+            <label for="sueldo">Sueldo</label>
+            <select id="sueldo" name="sueldo">
+                <option value="Menos400">Menos de 400€</option>
+                <option value="menos1200">Menos de 1200€</option>
+                <option value="menos2000">Menos de 2000€</option>
+                <option value="mas2000">Mas de 2000€</option>
+            </select>
+<br>
+            <input type="checkbox" id="datos_personales" name="datos_personales" value="enfermedad_profesional">
+            <label for="datos_personales">Con enfermedad profesional</label>
+<br>
+            <input type="checkbox" id="datos_personales" name="datos_personales" value="padres_cargo">
+            <label for="datos_personales">Padres a cargo</label>
+<br>
+            <input type="checkbox" id="datos_personales" name="datos_personales" value="hijos_cargo">
+            <label for="datos_personales">Hijos a cargo</label>
+        </fieldset>
+    </form>
+</body>
+</html>

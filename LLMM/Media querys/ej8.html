@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej4</title>
+    <style>
+        @media/*Escritorio*/(min-width: 1025px){
+            .grid-contenedor{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+
+        @media/*Tablet*/(min-width: 600px) and (max-width: 1024px){
+            .grid-contenedor{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media/*Movil*/(max-width: 599px){
+            .grid-contenedor{
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-contenedor">
+        <div class="item" >E1emento l</div>
+        <div class="item" >E1emento 2</div>
+        <div class="item" >E1emento 3</div>
+        <div class="item" >E1emento 4</div>
+    </div>
+</body>
+</html>

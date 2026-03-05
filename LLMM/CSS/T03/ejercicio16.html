@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 0 40px 0 0;
+            background-color: rgb(255, 124, 124);
+        }
+
+        .visible {
+            overflow: visible;
+        }/*Visible hace que todo el texto aunque se mayor que el espacio asignado dentro se muestre aunque sobresalga de el*/
+
+        .oculto {
+            overflow: hidden;
+        }/*hidden hace que todo el texto que sobresale del espacio asignado se oculte*/
+
+        .scroll {
+            overflow: scroll;
+        }/*scroll hace que en el espacio asignado tiene texto que sobresale de el lo muestre dentro del espacio permitiendo hacer sroll*/
+    </style>
+</head>
+<body>
+    <div class="visible">
+        <p>El sol se oculta lentamente tras el horizonte, tiñendo el cielo de tonos cálidos. Las olas del mar rompen suavemente en la orilla, creando una melodía natural. En ese instante, todo parece detenerse para contemplar la calma del mundo.</p>
+    </div>
+
+    <div class="oculto">
+        <p>El sol se oculta lentamente tras el horizonte, tiñendo el cielo de tonos cálidos. Las olas del mar rompen suavemente en la orilla, creando una melodía natural. En ese instante, todo parece detenerse para contemplar la calma del mundo.</p>
+    </div>
+
+    <div class="scroll">
+        <p>El sol se oculta lentamente tras el horizonte, tiñendo el cielo de tonos cálidos. Las olas del mar rompen suavemente en la orilla, creando una melodía natural. En ese instante, todo parece detenerse para contemplar la calma del mundo.</p>
+    </div>
+</body>
+</html>

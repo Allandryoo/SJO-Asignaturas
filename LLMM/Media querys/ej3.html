@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej3</title>
+    <style>
+        @media/*Escritorio*/(min-width:600px){
+            .menu{
+                display: flex;
+                flex-direction: row;
+                background-color: aqua;
+            }
+            li {
+                margin-right: 20px;
+            }
+        }
+        @media/*Movil*/(max-width:599px){
+            .menu{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                background-color: blanchedalmond;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li>Inicio</li>
+            <li>Servicios</li>
+            <li>Blog</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+    
+</body>
+</html>

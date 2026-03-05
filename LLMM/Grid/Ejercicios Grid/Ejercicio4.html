@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        body {
+            display: grid;
+            height: 500px;
+            place-content: center;
+        }
+        .container {
+            color: white;
+            width: 500px;
+            height: 200px;
+            background-color: #989898;
+            display: grid;
+            
+            grid-template-areas: 
+            "header header header header header"
+            "celda2 celda3 celda3 celda4 celda4"
+            "celda2 celda5 celda5 celda6 celda6";
+            gap: 2px;
+        }
+        .container div{
+            background-color: #525252;
+            display: grid;
+            place-items: center;
+        }
+        .item1 {
+            grid-area: header;
+        }
+        .item2 {
+            grid-area: celda2;
+        }
+        .item3 {
+            grid-area: celda3;
+        }
+        .item4 {
+            grid-area: celda4;
+        }
+        .item5 {
+            grid-area: celda5;
+        }
+        .item6 {
+            grid-area: celda6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">Usando grid-areas</div>
+        <div class="item2">celda 2</div>
+        <div class="item3">celda 3</div>
+        <div class="item4">celda 4</div>
+        <div class="item5">celda 5</div>
+        <div class="item6">celda 6</div>
+    </div>
+</body>
+</html>

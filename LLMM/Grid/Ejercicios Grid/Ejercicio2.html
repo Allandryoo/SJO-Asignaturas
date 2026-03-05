@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <style>
+        body {
+            display: grid;
+            height: 500px;
+            place-content: center;
+        }
+        .container {
+            color: white;
+            width: 500px;
+            height: 200px;
+            background-color: #989898;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 5px;
+        }
+        .container div {
+            background-color:#5d5d5d;
+            display: grid;
+            place-items: center;
+        }
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">celda 1</div>
+        <div>celda 2</div>
+        <div>celda 3</div>
+        <div>celda 4</div>
+        <div>celda 5</div>
+        <div>celda 6</div>
+        <div>celda 7</div>
+    </div>
+</body>
+</html>

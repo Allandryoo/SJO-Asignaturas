@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de Posicionamiento CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-fijo">
+        Menú Fijo (position: fixed)
+    </header>
+
+    <div class="contenedor-lienzo">
+        
+        <h2>Lienzo Principal</h2>
+        
+        <div class="caja caja-float">
+            Caja Flotante (float: left)
+        </div>
+        <p>
+            Este es un párrafo de texto. La caja anterior (Caja Flotante) usará la propiedad <strong>left</strong>  para que este texto fluya a su alrededor. Esto demuestra cómo `float` cambia el flujo del documento. Es importante tener suficiente texto para que el efecto sea visible y claro.
+        </p>
+
+        <div class="caja caja-relative">
+            Caja 1: position: relative
+            <br>
+            (Se mueve desde aquí)
+        </div>
+
+        <div class="caja caja-absolute-1">
+            Caja 2: position: absolute y z-index: 1
+        </div>
+        
+        <div class="caja caja-absolute-2">
+            Caja 3: position: absolute y z-index: 10
+            <br>
+            (Debe quedar **encima** de la Caja 2)
+        </div>
+        
+        <br><br><br><br><br><br><br><br><br><br>
+
+        <div class="seccion-sticky">
+            <h3>Sección con Elemento Sticky</h3>
+            <div class="caja caja-sticky">
+                Soy la Caja Sticky (top: 0).
+                <br>
+                Me pego al tope al hacer scroll.
+            </div>
+            <p>
+                Más contenido para que el elemento sticky pueda demostrar su función mientras haces scroll.
+            </p>
+        </div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+    </div>
+
+</body>
+</html>

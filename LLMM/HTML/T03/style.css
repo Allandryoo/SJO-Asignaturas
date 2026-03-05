@@ -1,0 +1,63 @@
+.cajaprincipal {
+    background-color: #ffffff;
+    width: 100%;
+    height: 2000px;
+}
+.columnaizquierda {
+    background-color: #ffffff;
+    height: 500px;
+    width: 15%;
+    float: left;
+    position: sticky;
+    top:1px;
+}
+
+.columnaderecha {
+    background-color: #ffffff;
+    height: 100%;
+    width: 15%;
+    float: left;
+}
+.columnacentral {
+    background-color: #ffffff;
+    height: 100%;
+    width: 70%;
+    float: left;
+}
+.header {
+    text-align: center;
+    padding-top: 30px;
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+}
+.nav {
+    padding-top: 10px;
+    text-align: center;
+    float: left;
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+}
+.navp {
+    padding: 3px;
+}
+
+a {
+    border: solid 1px black;
+    background-color: #000000;
+    margin: 15px;
+}
+a:hover {
+  background-color: white;
+  color: black;             
+  font-size: 1.5em;          
+}
+img {
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+ul {
+    float: left;
+}

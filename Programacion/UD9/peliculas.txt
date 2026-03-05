@@ -1,0 +1,11 @@
+Titulo,Ano,Director,Genero,DuracionMinutos,Puntuacion
+El Viaje Infinito,2019,Laura Mendez,Ciencia Ficcion,128,8.2
+Sombras del Pasado,2021,Carlos Rivas,Drama,142,7.9
+Risas en Verano,2018,Ana Torres,Comedia,97,6.8
+La Ultima Frontera,2020,Jorge Salvatierra,Accion,115,7.4
+Corazones de Papel,2017,Marina Soler,Romance,103,7.1
+Ecos del Silencio,2022,Pablo Herrera,Thriller,121,8.0
+Luz de Medianoche,2016,Sofia Delgado,Fantasia,110,7.3
+El Guardian del Tiempo,2019,Hector Navarro,Aventura,134,8.5
+Cafe en Otono,2023,Isabel Cortes,Drama,99,7.7
+Codigo Nebula,2024,Raul Esteban,Ciencia Ficcion,140,8.6

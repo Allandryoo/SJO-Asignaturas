@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej5</title>
+    <style>
+        @media/*Escritorio*/(min-width: 769px){
+            header {
+                background-color: aqua;
+                width: 100%;
+                text-align: center;
+                font-size: 36px;
+            }
+            nav {
+                background-color: rgb(23, 239, 59);
+                width: 100%;
+                text-align: center;
+                font-size: 24px;
+            }
+            .contenido {
+                background-color: rgb(63, 34, 227);
+                width: 90%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+            }
+            main {
+                background-color: rgb(207, 249, 39);
+                width: 70%;
+            }
+            .lateral {
+                background-color: rgb(243, 157, 30);
+                width: 30%;
+            }
+            footer {
+                background-color: rgb(245, 60, 255);
+                width: 100%;
+                text-align: center;
+                font-size: 36px;
+            }
+        }
+
+        @media/*Movil*/(max-width: 768px){
+            header {
+                background-color: aqua;
+                width: 100%;
+                text-align: center;
+                font-size: 28px;
+            }
+            nav {
+                background-color: rgb(23, 239, 59);
+                width: 100%;
+                text-align: center;
+                font-size: 16px;
+            }
+            .contenido {
+                background-color: rgb(63, 34, 227);
+            }
+            main {
+                background-color: rgb(207, 249, 39);
+                width: 100%;
+            }
+            .lateral {
+                background-color: rgb(243, 157, 30);
+                width: 100%;
+            }
+            footer {
+                background-color: rgb(245, 60, 255);
+                width: 100%;
+                text-align: center;
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Cabecera</header>
+    <nav>Menu</nav>
+        <div class="contenido">
+            <main>Contenido principal</main>
+            <div class="lateral">lnformación secundaria</div>
+        </div>
+        <footer>Pie de página</footer>
+</body>
+</html>

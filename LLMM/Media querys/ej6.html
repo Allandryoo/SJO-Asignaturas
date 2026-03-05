@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej6</title>
+    <style>
+        @media/*Escritorio*/(min-width: 1025px){
+            .galeria {
+                display: grid;
+                grid-template-columns:1fr 1fr 1fr;
+            }
+            img {
+                width: 100%;
+            }
+        }
+
+        @media/*Tablet*/(min-width: 600px) and (max-width: 1024px){
+            .galeria {
+                display: grid;
+                grid-template-columns:1fr 1fr;
+            }
+            img {
+                width: 100%;
+            }
+        }
+
+        @media/*Movil*/(max-width: 599px){
+            .galeria {
+                display: grid;
+                grid-template-columns:1fr ;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="galeria">
+        <img src="https://picsum.photos/300?1">
+        <img src="https://picsum.photos/300?2">
+        <img src="https://picsum.photos/300?3">
+        <img src="https://picsum.photos/300?4">
+        <img src="https://picsum.photos/300?5">
+        <img src="https://picsum.photos/300?6">
+    </div>
+    
+
+</body>
+</html>

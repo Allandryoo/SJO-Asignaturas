@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej4</title>
+    <style>
+        @media/*Escritorio*/(min-width: 601px){
+            .nav {
+                display: flex;
+                flex-direction: row;
+            }
+            .hamburguesa {
+                display: none;
+            }
+
+        }
+
+        @media/*Movil*/(max-width: 600px){
+            .nav {
+                display: flex;
+                flex-direction: row;
+            }
+            .menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="hamburguesa">=</div>
+        <ul class="menu">
+            <li>Inicio</li>
+            <li>Servicios</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+</body>
+</html>

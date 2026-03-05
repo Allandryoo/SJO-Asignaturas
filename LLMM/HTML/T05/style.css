@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 8px;
+  }
+fieldset {
+    border: 2px solid #ff0000;
+  }
+
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+.salto {
+    display: block;
+  }
+.terminos {
+    text-align: right;
+  }
+
+

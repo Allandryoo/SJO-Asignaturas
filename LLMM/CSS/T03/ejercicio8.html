@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio8</title>
+    <style>
+        p {color: black}
+        .mensaje p {color: blue;}
+        .mensaje .importante {color: red;}
+        #importante {color: orange;}
+    </style>
+</head>
+<body>
+    <!--
+    p {color: black}
+    .mensaje p {color: blue;}
+    .mensaje .importante {color: red;}
+    #importante {color: orange;} 
+
+    El texto se pone naranja porque el css va por orden y al ser el #importante el ultimo parametro se queda con ese
+    -->
+    <div class="mensaje">
+        <p class="importante" id="importante">Hola</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17</title>
+    <style>
+        .caja_a {
+            width: 300px;
+            max-width: 300px;
+            padding: 20px;
+            border: 5px solid black;
+            background-color: rgb(169, 242, 255);
+            box-sizing: none;
+            margin-bottom: 20px;
+        }
+        .caja_b {
+            width: 300px;
+            max-width: 300px;
+            padding: 40px;
+            border: 5px solid blue;
+            background-color: rgb(89, 202, 255);
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        .caja_c {
+            width: 300px;
+            max-width: 300px;
+            padding: 40px;
+            border: 5px solid orange;
+            background-color: rgb(255, 253, 135);
+            box-sizing: none;
+            margin-bottom: 20px;
+            margin: 20px auto;
+        }
+        .bloque {
+            display: block;
+            background-color: rgb(139, 255, 139);
+            border: 5px solid green;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .en_linea {
+            display: inline;
+            background-color: rgb(253, 113, 113);
+            border: 5px solid red;
+            padding: 10px;
+        }
+        .linea_bloque {
+            display: inline-block;
+            background-color: rgb(173, 118, 184);
+            border: 5px solid purple;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ejercicio Box Model y Display</h2>
+
+    <div class="caja_a">CAJA A</div>
+
+    <div class="caja_b">CAJA B</div>
+
+    <div class="caja_c">
+        CAJA C centrada<br>
+        Texto extra<br>
+        Mas texto para aumentar la altura.
+    </div>
+    
+    <h2>Comparacion de display:</h2>
+    
+    <p class="bloque">Elemento tipo BLOQUE</p>
+
+    <br>
+    
+    <span class="en_linea">Elemento en LINEA</span>
+    <span class="en_linea">Otro elemento EN LINEA</span>
+    
+    <br><br>
+
+    <span class="linea_bloque">Elemento INLINE-BLOCK</span>
+    <span class="linea_bloque">Otro INLINE-BLOCK</span>
+
+</body>
+</html>

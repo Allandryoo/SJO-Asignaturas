@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            width: 100%;
+            height: 120px;
+        }
+        h3 {
+            color: white;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        p {
+            font-size: 1em;
+        }
+        b {
+            font-size: 1.3em;
+            display: block;
+            text-align: center;
+        }
+        .contenedor {
+            border: 1px solid black;
+            width: 80%;
+            padding: 5px;
+        }
+        .titulo {
+            background-color: #333334;
+            height: 50px;
+            text-align: right;
+            padding: 5px;
+        }
+        div.encapsulador {
+            width: 100%;
+            background-color: #cacaca;
+            display: flex;
+            text-align: justify;
+            align-items: stretch;
+        }
+        .encapsulador div {
+            padding: 7px;
+            border: 1px solid black;
+        }
+        .encapsulador div:nth-of-type(1) {
+            flex-basis: 33.3%;
+            background-color:#7ebdbb;
+        }
+        .encapsulador div:nth-of-type(2) {
+            flex-basis: 33.3%;
+            background-color:#b6ebb3;
+        }
+        .encapsulador div:nth-of-type(3) {
+            flex-basis: 33.3%;
+            background-color:#bacee3;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h3>viajes</h3>
+        </div>
+        <div class="encapsulador">
+            <div>
+                <img src="img/polonia.png" alt="Polonia" >
+                <p><b>Polonia, un pais por descubrir</b></p>
+                <p>Dignissim placerat vel aenean porta, magna ac scelerisque facilisis, rhoncus est! Urna pulvinar dolor lorem purus dapibus quis vut! Hac nunc vel ridiculus enimmagnis mid phasellus! Duis et pellentesque lacus diam? Sed phasellus, urna pellentesque mauris ac phasellus lacus augue enim! Penatibus, porta, sit dis et adipiscing eut nisi ac.</p>
+            </div>
+            <div>
+                <img src="img/oporto.png" alt="Viejo_Oporto">
+                <p><b>Un paseo por el viejo Oporto</b></p>
+                <p>Cras quis mattis. Elementum, lectus magna, amet dis dis pulvinar scelerisque proin montes quis tempor placerat enimnec dictumst elementum nec augue! Dignissim non enim.</p>
+            </div>
+            <div>
+                <img src="img/malta.png" alt="Malta">
+                <p><b>Malta, la isla mediterranea por conocer</b></p>
+                <p>Dignissim placerat vel aenean magna ac scelerisque facilisis. porta,</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
