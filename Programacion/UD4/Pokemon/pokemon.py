@@ -116,7 +116,7 @@ class Mapa:
 
     def añadir_pokemons(self):
         for i in self.mapa:
-            if i[0] == None and random.randint(0, 100) == random.randint(0, 100):
+            if i[0] == None and random.randint(0, 1) == random.randint(0, 1):
                 if i[1][0] == 1 and i[1][1] == 1:
                     i[0] = None
                 else:
@@ -358,7 +358,7 @@ opciones = {
 }
 almacen = []
 
-with open(r"Programacion\UD4\Pokemon\pokemons.txt") as lista_pokemons:
+with open(r"Programacion\UD4\Pokemon\pokemons.txt", "r") as lista_pokemons:
     for contenedor_texto in lista_pokemons:
         contenedorS_texto = contenedor_texto.strip()
         pokemon = procesar_linea(contenedor_texto)

@@ -2,10 +2,18 @@ import os, shutil
 class NotaErronea(Exception):
     pass
 
-def ValidaNota(nota):
-    if not nota < 0 and nota > 10:
-        raise NotaErronea("Nota no valida")
+class AsignaturaErronea(Exception):
+    pass
+
+def ValidarNota(nota):
+    if not 0 <= nota < 10:
+        raise NotaErronea("Nota no valida\n")
     
+def ValidarAsignatura(asig):
+    asignaturas=["Mates","FyQ","Castellano","Programacion","EEDD","BBDD","Digitalizacion"]
+    if not asig in asignaturas:
+        raise AsignaturaErronea("Asignatura no valida\n")
+
 def menu():
     opciones = [
         "Añadir nota nueva.",
@@ -18,23 +26,30 @@ def menu():
         print(f"{indice} para: {opcion}")
 
 def introducir_nota():
+    
+    nom=input("Indique el nombre del alumno: ")
     try:
-        nom=input("Indique el nombre del alumno: ")
+        asig=input("Indique la asignatura: ")
+        ValidarAsignatura(asig)
+        nota=float(input("Indique la nota: "))
+        ValidarNota(nota)
+        if not os.path.exists(ruta):
+            with open(r"Programacion\UD9\Accesos2\notas.csv", "w") as file:
+                file.write("Nombre,Asignatura,Nota\n")
+                file.write(f"{nom.lower()},{asig.lower()},{nota}\n")
+                file.close()
+        else:
+            with open(r"Programacion\UD9\Accesos2\notas.csv", "a") as file:
+                file.write(f"{nom.lower()},{asig.lower()},{nota}\n")
+                file.close()
     except NotaErronea as e:
         print("!Error:",e)
-        
-    asig=input("Indique la asignatura: ")
-    nota=float(input("Indique la nota: "))
-    if not os.path.exists(ruta):
-        with open(r"Programacion\UD9\Accesos2\notas.csv", "w") as file:
-            file.write("Nombre,Asignatura,Nota\n")
-            file.write(f"{nom.lower()},{asig.lower()},{nota}\n")
-            file.close()
-    else:
-        with open(r"Programacion\UD9\Accesos2\notas.csv", "a") as file:
-            file.write(f"{nom.lower()},{asig.lower()},{nota}\n")
-            file.close()
+    except AsignaturaErronea as e:
+        print("!Error:",e)
+    except ValueError as e:
+        print("No puedes escribir texto.\n")
 
+    
 def media_notas():
     
     lista_notas=[]
@@ -68,20 +83,16 @@ print("Bienvenido")
 while not salir:
 
     menu()
-       
     opcion=int(input(""))
 
     match opcion:
           
         case 0:
             introducir_nota()
-
-        case 2:
-            media_notas()
-
         case 1:
             nom_alumno = input("Indica el nombre del alumno.\n")
             notas_alumno(nom_alumno)
-
+        case 2:
+            media_notas()
         case 3:
             salir = True
