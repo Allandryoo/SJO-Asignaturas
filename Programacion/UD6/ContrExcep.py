@@ -10,11 +10,11 @@ def validar_negativo(numero):
         raise ErrorNegativo("No puedes ingresar un cantidad negativa")
 
 def validar_maximo(numero):
-    if numero < 0:
+    if numero > 50000:
         raise ErrorCantidadMaxima("Cantidad maxima a ingresar 50.000€")
 
 def validar_minimo(numero):
-    if numero < 0:
+    if numero >= 0 and numero < 5:
         raise ErrorCantidadMinima("Cantidad minima a ingresar 5€")
     
 class cliente:
@@ -40,9 +40,9 @@ while True:
         validar_negativo(cantidad)
         c1.ingresar_dinero(cantidad)
     except ErrorCantidadMaxima as max:
-        print(max)
+        print("!Error:",max)
     except ErrorCantidadMinima as min:
-        print(min)
+        print("!Error:",min)
     except ErrorNegativo as neg:
-        print(neg)
+        print("!Error:",neg)
         
