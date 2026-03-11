@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Productos</h1>
+    <ul id="productos-lista"></ul>
+    <script>
+        async function cargarProductos() {
+            try {
+                const respuesta = await fetch('http://localhost:3000/productos');
+                const productos = await respuesta.json();
+                const lista = document.getElementById('productos-lista');
+                productos.forEach(producto => {
+                    const li = document.createElement('li');
+                    li.textContent = `${producto.titulo} - $${producto.precio}`;
+                    lista.appendChild(li);
+                });
+            } catch (error) {
+                console.error('Error al obtener los productos', error);
+            }
+        }
+        cargarProductos();
+    </script>
+</body>
+</html>
