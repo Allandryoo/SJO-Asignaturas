@@ -18,3 +18,4 @@ Movido dato1.csv a csv
 Movido dato2.csv a csv
 Movido imagen1.jpg a jpg
 Movido imagen2.jpg a jpg
+Movido usuarios.csv a Otros
