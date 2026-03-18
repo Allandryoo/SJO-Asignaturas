@@ -57,11 +57,16 @@ def organizar_archivos(archivo, extension):
     elif extension == "pdf":
         carpeta = "Informes"
     elif extension == "txt":
-        carpeta = "Backup"
+        carpeta = "Documento"
     
+    if not os.path.exists("Backup"):
+        os.mkdir("Backup")
+    shutil.move(archivo, "Backup")
+
     if not os.path.exists(carpeta):
         os.mkdir(carpeta)
     shutil.move(archivo, carpeta)
+
     if not os.path.exists("log.txt"):
         with open("log.txt", "w") as log:
             log.write(f"Movido {archivo} a {carpeta} | Hora: {datetime.now()}\n")
