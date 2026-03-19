@@ -62,7 +62,7 @@ def organizar_archivos(archivo, extension):
     if not os.path.exists("Backup"):
         os.mkdir("Backup")
     shutil.copy(archivo, "Backup")
-    
+
 
     if not os.path.exists(carpeta):
         os.mkdir(carpeta)
@@ -100,9 +100,14 @@ while not salir:
 
         menu_sistema()
         opcion_sistema = input("Indique una opcion:\n")
-        lista_archivos = os.listdir(".")
-        for i in lista_archivos:
-            ip = i.split(".")
-            if len(ip) > 1:
-                if ip[0] != "log" and ip[-1] != "py" and ip[-1] != "csv":
-                    organizar_archivos(i,ip[-1])
+        match opcion_sistema:
+
+            case 0:
+                lista_archivos = os.listdir(".")
+                for i in lista_archivos:
+                    ip = i.split(".")
+                    if len(ip) > 1:
+                        if ip[0] != "log" and ip[-1] != "py" and ip[-1] != "csv":
+                            organizar_archivos(i,ip[-1])
+            case 1:
+                
