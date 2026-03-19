@@ -61,7 +61,8 @@ def organizar_archivos(archivo, extension):
     
     if not os.path.exists("Backup"):
         os.mkdir("Backup")
-    shutil.move(archivo, "Backup")
+    shutil.copy(archivo, "Backup")
+    
 
     if not os.path.exists(carpeta):
         os.mkdir(carpeta)
