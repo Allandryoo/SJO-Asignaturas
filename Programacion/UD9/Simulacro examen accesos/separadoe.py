@@ -23,7 +23,7 @@ diccionario_frecuencias = calcular_frecuencia(lista)
     
 def generar_ranking(frecuencias):
     tuplas = frecuencias.items()
-    for i in tuplas:
+    for i in tuplas.sorted(key[1], reverse=True):
         print(i)
 
 
