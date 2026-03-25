@@ -2,3 +2,10 @@ Movido contrato1.docx a Contratos | Hora: 2026-03-23 17:00:43.363783
 Movido Documentos.txt a Documentos | Hora: 2026-03-23 17:00:43.368540
 Movido hojacalculos1.xlsx a Facturas | Hora: 2026-03-23 17:00:43.373902
 Movido pdf1.pdf a Informes | Hora: 2026-03-23 17:00:43.379891
+Movido contrato1.docx a Contratos | Hora: 2026-03-25 23:12:35.192062
+Movido Documentos.txt a Documentos | Hora: 2026-03-25 23:12:35.192062
+Movido hojacalculos1.xlsx a Facturas | Hora: 2026-03-25 23:12:35.194107
+Movido pdf1.pdf a Informes | Hora: 2026-03-25 23:12:35.203345
+Restaurado contrato1.docx en Contratos desde Backup | Hora: 2026-03-25 23:31:59.805765
+Eliminado pdf1.pdf de Informes | Hora: 2026-03-26 00:18:32.648532
+Restaurado pdf1.pdf en Informes desde Backup | Hora: 2026-03-26 00:18:59.020412
