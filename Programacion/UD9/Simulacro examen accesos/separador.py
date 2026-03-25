@@ -25,8 +25,10 @@ def generar_ranking(frecuencias):
     ranking = []
     while len(lista) > 0:
         mayor = lista[0]
+        print(mayor)
         for elemento in lista:
             if elemento[1] > mayor[1]:
+                print(elemento[1],mayor[1])
                 mayor = elemento
 
         ranking.append(mayor)
@@ -38,7 +40,7 @@ def exportar_ranking(lista):
     with open("ranking.csv", "w") as registro:
         registro.write("palabra,frequencia\n")
         for pos in lista:
-            registro.write(str(f"{pos}\n"))
+            registro.write(str(f"{pos[0]},{pos[1]}\n"))
 
 lista = leer_texto("fichero.txt")
 
