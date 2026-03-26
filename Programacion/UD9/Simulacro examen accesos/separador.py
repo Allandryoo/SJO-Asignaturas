@@ -1,13 +1,9 @@
-import os
 def leer_texto(ruta):
     with open(ruta, "r") as file:
         lineas = file.readlines()
         for linea in lineas:
-            lineaseparada = linea.lower().strip().replace(".", " ").replace(",", " ").split()
+            lineaseparada = linea.lower().replace(".", " ").replace(",", " ").split()
             return lineaseparada
-
-
-
 
 def calcular_frecuencia(lista):
     frecuencias = {}
@@ -17,8 +13,6 @@ def calcular_frecuencia(lista):
         else:
             frecuencias[palabra] = 1
     return frecuencias
-
-
     
 def generar_ranking(frecuencias):
     lista = list(frecuencias.items())

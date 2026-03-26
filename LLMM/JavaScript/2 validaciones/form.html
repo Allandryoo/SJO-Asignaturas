@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario sin validación HTML</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<h2>Formulario de registro</h2>
+
+<form id="formulario">
+
+    <label for="email1">Email:</label><br>
+    <input type="text" id="email1" name="email1"><br><br>
+
+    <label for="email2">Repetir Email:</label><br>
+    <input type="text" id="email2" name="email2">
+	<span id="errorMail" class="mensaje-error"></span><br><br>
+
+    <label for="pass1">Contraseña:</label><br>
+    <input type="password" id="pass1" name="pass1"><br><br>
+
+    <label for="pass2">Repetir Contraseña:</label><br>
+    <input type="password" id="pass2" name="pass2">
+	<span id="errorPass" class="mensaje-error"></span><br><br>
+
+    <label for="edad">Edad:</label><br>
+    <input type="text" id="edad" name="edad"><br><br>
+
+    <label for="telefono">Teléfono:</label><br>
+    <input type="text" id="telefono" name="telefono"><br><br>
+	
+	<label for="dni">DNI:</label><br>
+    <input type="text" id="dni" name="dni"><br><br>
+
+    <label for="opciones">Selecciona una opción:</label><br>
+    <select id="opciones" name="opciones">
+        <option value="">-- Selecciona --</option>
+        <option value="op1">Opción 1</option>
+        <option value="op2">Opción 2</option>
+        <option value="op3">Opción 3</option>
+    </select>
+	<br><br>
+
+    <input type="checkbox" id="condiciones" name="condiciones">
+    <label for="condiciones">Acepto los términos y condiciones</label>
+	<span id="errorValidacionFinal" class="mensaje-error"></span><br><br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+<script src="form.js"></script>
+
+</body>
+</html>
