@@ -14,10 +14,10 @@ let regexDni = /^\d{8}[A-HJ-NP-TV-Z]$/;
 
 function comprobar_email(email,) {
     let valor = email.value
-    if(!regexEmail.test(valor)){
+    if (!regexEmail.test(valor)) {
         email.classList.remove("ok");
         email.classList.add("error")
-    }else {
+    } else {
         email.classList.remove("error");
         email.classList.add("ok")
     }
@@ -25,10 +25,10 @@ function comprobar_email(email,) {
 
 function comprobar_pass(pass) {
     let valor = pass.value
-    if(!regexPass.test(valor)){
+    if (!regexPass.test(valor)) {
         pass.classList.remove("ok");
         pass.classList.add("error")
-    }else {
+    } else {
         pass.classList.remove("error");
         pass.classList.add("ok")
     }
@@ -48,4 +48,25 @@ inputPass1.addEventListener("input", () => {
 
 inputPass2.addEventListener("input", () => {
     comprobar_pass(inputPass2)
+})
+
+inputEmail2.addEventListener("change", () => {
+    if (inputEmail1.value !== inputEmail2.value) {
+        errorMail.textContent = "Los emails no coinciden"
+    } else {
+        errorMail.textContent = ""
+    }
+})
+
+inputPass2.addEventListener("change", () => {
+    if (inputPass1.value !== inputPass2.value) {
+        errorPass.textContent = "Las contraseñas no coinciden"
+    } else {
+        errorPass.textContent = ""
+    }
+})
+
+inputEdad.addEventListener("change", () => {
+    let valor = inputEdad.value
+    if ()
 })
