@@ -20,7 +20,8 @@ def menu_sistema():
         "Ver historial de movimientos",
         "Buscar archivos",
         "Eliminar archivos",
-        "Restaurar backup"
+        "Restaurar backup",
+        "Cerrar Sesión"
     ]
     for i, o in enumerate(opciones_sistema):
         print(f"Presiona {i} para: {o}")
@@ -98,10 +99,7 @@ def eliminar_archivo(*archivos):
         eliminado = False
         for carpeta in [".", "Facturas", "Contratos", "Informes", "Documentos", "Otros"]:
             ruta = f"{carpeta}/{nombre}"
-            if os.path.exists(ruta):
-                if not os.path.exists("Backup"):
-                    os.mkdir("Backup")
-                shutil.copy(ruta, "Backup")
+            if os.path.isfile(ruta):
                 os.remove(ruta)
                 print(f"Eliminado: {ruta}")
                 escribir_log(f"Eliminado {nombre} de {carpeta}")
@@ -151,22 +149,21 @@ def restaurar_backup():
 
 
 salir = False
-validado = True
-
+validado = False
 while not salir:
 
-    # menu_usuario()
-    # while True:
-    #     opcion_usuario=int(input("Bienvenido que desea hacer?\n"))
-    #     match opcion_usuario:
-    #         case 0:
-    #             validado = validar_usuario()
-    #         case 1:
-    #             crear_usuario()
-    #             break
-    #         case 2:
-    #             salir=True
-    #             break
+    menu_usuario()
+    while not validado:
+        opcion_usuario=int(input("Bienvenido que desea hacer?\n"))
+        match opcion_usuario:
+            case 0:
+                validado = validar_usuario()
+            case 1:
+                crear_usuario()
+                break
+            case 2:
+                salir=True
+                break
 
     while validado:
         menu_sistema()
@@ -187,3 +184,5 @@ while not salir:
                 eliminar_archivo(*[a.strip() for a in archivos_eliminar])
             case 4:
                 restaurar_backup()
+            case 5:
+                validado = False

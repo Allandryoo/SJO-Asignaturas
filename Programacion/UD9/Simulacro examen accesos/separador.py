@@ -19,10 +19,8 @@ def generar_ranking(frecuencias):
     ranking = []
     while len(lista) > 0:
         mayor = lista[0]
-        print(mayor)
         for elemento in lista:
             if elemento[1] > mayor[1]:
-                print(elemento[1],mayor[1])
                 mayor = elemento
 
         ranking.append(mayor)
