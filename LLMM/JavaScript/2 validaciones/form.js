@@ -2,15 +2,20 @@ let inputEmail1 = document.querySelector("#email1");
 let inputEmail2 = document.querySelector("#email2");
 let inputPass1 = document.querySelector("#pass1");
 let inputPass2 = document.querySelector("#pass2");
-let inputEdad = document.querySelector("#edad");
+let inputEdad = document.getElementById("edad");
 let inputTelefono = document.querySelector("#telefono");
 let inputDni = document.querySelector("#dni");
+let opciones = document.querySelectorAll("#opciones")
+let condiciones = document.querySelector("#condiciones")
+
 let errorMail = document.querySelector("#errorMail");
 let errorPass = document.querySelector("#errorPass");
+
 
 let regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$/;
 let regexPass = /^[a-zA-Z0-9._%+-]{6,}$/;
 let regexDni = /^\d{8}[A-HJ-NP-TV-Z]$/;
+let regexTlf = /^\d{9}$/;
 
 function comprobar_email(email,) {
     let valor = email.value
@@ -50,7 +55,7 @@ inputPass2.addEventListener("input", () => {
     comprobar_pass(inputPass2)
 })
 
-inputEmail2.addEventListener("change", () => {
+inputEmail2.addEventListener("input", () => {
     if (inputEmail1.value !== inputEmail2.value) {
         errorMail.textContent = "Los emails no coinciden"
     } else {
@@ -58,7 +63,7 @@ inputEmail2.addEventListener("change", () => {
     }
 })
 
-inputPass2.addEventListener("change", () => {
+inputPass2.addEventListener("input", () => {
     if (inputPass1.value !== inputPass2.value) {
         errorPass.textContent = "Las contraseñas no coinciden"
     } else {
@@ -66,7 +71,14 @@ inputPass2.addEventListener("change", () => {
     }
 })
 
-inputEdad.addEventListener("change", () => {
+inputEdad.addEventListener("input", () => {
     let valor = inputEdad.value
-    if ()
+    if (valor < 18) {
+        inputEdad.classList.remove("ok");
+        inputEdad.classList.add("error")
+    } else {
+        inputEdad.classList.remove("error");
+        inputEdad.classList.add("ok")
+    }
 })
+
