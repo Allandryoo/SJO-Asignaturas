@@ -1,77 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fafafa;
-    color: #333;
-    overflow: hidden;
-}
-
-.container {
+    font-family: Arial;
     text-align: center;
-    /* Sin borde ni color de fondo, ya no es una "caja" visible */
+    background-color: #f4f4f4;
 }
 
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: normal;
-    color: #666;
-}
-
-#count {
-    display: inline-block;
-    font-size: 8rem;
-    font-weight: bold;
-    color: #222;
-    transition: transform 0.1s ease;
-    user-select: none;
+.game-container {
+    margin-top: 50px;
 }
 
 button {
-    position: fixed;
-    bottom: 40px;
-    border: none;
-    border-radius: 50px;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+button:disabled {
+    background-color: gray;
 }
 
-button:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.mejoras {
+    margin-top: 20px;
 }
 
-#click-btn {
-    left: 40px;
-    background-color: #007bff;
-    color: white;
-    font-size: 1.5rem;
-    padding: 20px 40px;
-}
-
-#reset-btn.secondary {
-    right: 40px;
-    background-color: #ff3b30;
-    color: white;
-    margin-bottom: 0;
-    /* Removiendo margen del diseño anterior */
+#mensajeFinal {
+    margin-top: 20px;
+    font-size: 20px;
+    color: green;
 }
