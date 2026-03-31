@@ -358,7 +358,7 @@ opciones = {
 }
 almacen = []
 
-with open(r"Programacion\UD4\Pokemon\pokemons.txt", "r") as lista_pokemons:
+with open(r"pokemons.txt", "r") as lista_pokemons:
     for contenedor_texto in lista_pokemons:
         contenedorS_texto = contenedor_texto.strip()
         pokemon = procesar_linea(contenedor_texto)
