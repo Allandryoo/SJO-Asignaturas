@@ -6,8 +6,7 @@ añadirBtn.addEventListener("click", (e) => {
     e.preventDefault(); 
     
     let parrafoNuevo = document.createElement("div");
-    parrafoNuevo.style.backgroundColor = "lightgreen";
-    parrafoNuevo.style.color = "black";
+    parrafoNuevo.classList.add("mensaje");
     
     parrafoNuevo.textContent = parrafo.value; 
 
