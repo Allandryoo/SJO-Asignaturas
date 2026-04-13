@@ -5,8 +5,17 @@ const lvlUpBtn1 = document.querySelector("#mejora1");
 const lvlUpBtn2 = document.querySelector("#mejora2");
 const mensajeFinal = document.querySelector("#mensajeFinal")
 
+clickBtn.style.backgroundColor = "lightgreen";
+clickBtn.style.borderRadius = "999px";
+
+lvlUpBtn1.style.backgroundColor = "lightyellow";
+lvlUpBtn1.style.borderRadius = "999px";
+
+lvlUpBtn2.style.backgroundColor = "lightyellow";
+lvlUpBtn2.style.borderRadius = "999px";
+
 let count = 0;
-let multi = 100;
+let multi = 10000;
 
 clickBtn.addEventListener("click", () => {
     count += multi;
@@ -16,7 +25,7 @@ clickBtn.addEventListener("click", () => {
         lvlUpBtn1.style.display = "none";
         lvlUpBtn2.style.display = "none";
         textMejora.style.display = "none"
-        mensajeFinal.textContent = "¡Felicidades! Has llegado al máximo.";
+        mensajeFinal.textContent = "¡Felicidades! Has llegado al máximo!";
     }
 });
 
