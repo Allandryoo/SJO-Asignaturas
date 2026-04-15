@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Chips & Chips — El casino online premium. Disfruta de tragamonedas, ruleta, blackjack y póker.">
+  <title>Chips & Chips</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700;900&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Background Particles -->
+  <div class="bg-particles" id="particles"></div>
+
+  <!-- Header -->
+  <header class="casino-header">
+    <h1>Chips & Chips</h1>
+    <p class="subtitle">Elige tu juego favorito</p>
+    <div class="neon-line" style="margin-top: 22px;"></div>
+  </header>
+
+  <!-- Games Grid -->
+  <main class="games-container">
+    <div class="games-grid">
+
+      <!-- JUEGO 1: Tragamonedas -->
+      <article class="game-card" id="game-slots">
+        <a href="slot.html" aria-label="Jugar Tragamonedas">
+          <div class="game-image-wrapper">
+            <!--
+              PARA AÑADIR IMAGEN: reemplaza el div .game-image-placeholder
+              con una etiqueta <img>. Ejemplo:
+              <img src="img/slots.jpg" alt="Tragamonedas">
+            -->
+            <div class="game-image-placeholder">
+              <span class="icon">🎰</span>
+              <span class="placeholder-text">Imagen aquí</span>
+            </div>
+          </div>
+          <div class="game-info">
+            <h3>Tragamonedas</h3>
+            <p class="game-desc">Gira y gana grandes premios</p>
+            <span class="play-btn">Jugar</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- JUEGO 2: Ruleta -->
+      <article class="game-card" id="game-roulette">
+        <a href="ruleta.html" aria-label="Jugar Ruleta">
+          <div class="game-image-wrapper">
+            <!--
+              PARA AÑADIR IMAGEN:
+              <img src="img/ruleta.jpg" alt="Ruleta">
+            -->
+            <div class="game-image-placeholder">
+              <span class="icon">🎡</span>
+              <span class="placeholder-text">Imagen aquí</span>
+            </div>
+          </div>
+          <div class="game-info">
+            <h3>Ruleta</h3>
+            <p class="game-desc">Apuesta y prueba tu suerte</p>
+            <span class="play-btn">Jugar</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- JUEGO 3: Blackjack -->
+      <article class="game-card" id="game-blackjack">
+        <a href="blackjack.html" aria-label="Jugar Blackjack">
+          <div class="game-image-wrapper">
+            <!--
+              PARA AÑADIR IMAGEN:
+              <img src="img/blackjack.jpg" alt="Blackjack">
+            -->
+            <div class="game-image-placeholder">
+              <span class="icon">🃏</span>
+              <span class="placeholder-text">Imagen aquí</span>
+            </div>
+          </div>
+          <div class="game-info">
+            <h3>Blackjack</h3>
+            <p class="game-desc">Consigue 21 y vence a la banca</p>
+            <span class="play-btn">Jugar</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- JUEGO 4: Póker -->
+      <article class="game-card" id="game-poker">
+        <a href="pollo.html" aria-label="Jugar Póker">
+          <div class="game-image-wrapper">
+            <!--
+              PARA AÑADIR IMAGEN:
+              <img src="img/poker.jpg" alt="Póker">
+            -->
+            <div class="game-image-placeholder">
+              <span class="icon">♠️</span>
+              <span class="placeholder-text">Imagen aquí</span>
+            </div>
+          </div>
+          <div class="game-info">
+            <h3>Póker</h3>
+            <p class="game-desc">Farolea y llévate el bote</p>
+            <span class="play-btn">Jugar</span>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="casino-footer">
+    <div class="footer-line"></div>
+    <p>© 2026 Chips & Chips — Juega con responsabilidad</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
