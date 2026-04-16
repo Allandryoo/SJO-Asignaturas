@@ -82,3 +82,88 @@ inputEdad.addEventListener("input", () => {
     }
 })
 
+let formulario = document.querySelector("#formulario");
+let selectOpciones = document.querySelector("#opciones");
+let errorValidacionFinal = document.querySelector("#errorValidacionFinal");
+
+function actualizarEstadoCampo(campo, esValido) {
+    campo.classList.remove("error", "ok");
+    campo.classList.add(esValido ? "ok" : "error");
+}
+
+function validarCoincidenciaEmail() {
+    if (inputEmail2.value !== inputEmail1.value) {
+        errorMail.textContent = "Los emails no coinciden";
+    } else {
+        errorMail.textContent = "";
+    }
+}
+
+function validarCoincidenciaPass() {
+    if (inputPass2.value !== inputPass1.value) {
+        errorPass.textContent = "Las contraseñas no coinciden";
+    } else {
+        errorPass.textContent = "";
+    }
+}
+
+inputEmail1.addEventListener("input", validarCoincidenciaEmail);
+inputEmail2.addEventListener("input", validarCoincidenciaEmail);
+
+inputPass1.addEventListener("input", validarCoincidenciaPass);
+inputPass2.addEventListener("input", validarCoincidenciaPass);
+
+formulario.addEventListener("submit", (evento) => {
+    let errores = [];
+    let emailValido = inputEmail1.value.includes("@");
+    let passValida = inputPass1.value.length >= 6;
+    let edadValida = Number(inputEdad.value) >= 18;
+    let dniValido = regexDni.test(inputDni.value);
+    let telefonoValido = inputTelefono.value.length === 9;
+    let opcionValida = selectOpciones.value !== "";
+    let condicionesValidas = condiciones.checked;
+
+    if (!emailValido) {
+        errores.push("El email debe contener una arroba.");
+    }
+
+    if (!passValida) {
+        errores.push("La contraseña debe tener al menos seis caracteres.");
+    }
+
+    if (!edadValida) {
+        errores.push("La edad debe ser mayor o igula a 18.");
+    }
+
+    if (!dniValido) {
+        errores.push("El DNI no es válido.");
+    }
+
+    if (!telefonoValido) {
+        errores.push("El teléfono debe tener exactamente 9 caracteres.");
+    }
+
+    if (!opcionValida) {
+        errores.push("Debes escoger una opción del select.");
+    }
+
+    if (!condicionesValidas) {
+        errores.push("Debes marcar el check de condiciones.");
+    }
+
+    actualizarEstadoCampo(inputEmail1, emailValido);
+    actualizarEstadoCampo(inputEmail2, emailValido && inputEmail1.value === inputEmail2.value);
+    actualizarEstadoCampo(inputPass1, passValida);
+    actualizarEstadoCampo(inputPass2, passValida && inputPass1.value === inputPass2.value);
+    actualizarEstadoCampo(inputEdad, edadValida);
+    actualizarEstadoCampo(inputDni, dniValido);
+    actualizarEstadoCampo(inputTelefono, telefonoValido);
+
+    if (errores.length > 0) {
+        evento.preventDefault();
+        errorValidacionFinal.innerHTML = errores.join("<br>");
+    } else {
+        errorValidacionFinal.textContent = "";
+    }
+});
+

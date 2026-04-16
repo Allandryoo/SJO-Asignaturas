@@ -12,12 +12,18 @@ public class EJ4 {
         numeros[8] = 3;
         numeros[9] = 3;
 
+        boolean esta = false;
+
         for (int i = 0; i < numeros.length; i++) {
             if (numeros[i] == 7) {
                 System.out.println("Tesoro encontrado en la posicion " + i + ".");
+                esta = true;
                 break;
             }
 
-        }System.out.println("Mapa vacio");
+        }
+        if (!esta) {
+            System.out.println("Mapa vacio");
+        }
     }
 }
