@@ -126,143 +126,156 @@ INSERT INTO asignaciones (id_empleado, id_proyecto, rol, horas_semana) VALUES
 (12, 7, 'Investigación', 25);
 
 -- ========================
--- CONSULTAS CON INNER JOIN
+-- INNER JOIN
 -- ========================
 
 -- 1. Consulta: nombre y apellido de cada empleado junto con el nombre de su departamento
 SELECT e.nombre, e.apellido, d.nombre AS nombre_departamento
 FROM empleados e
-INNER JOIN departamentos d ON e.id_departamento = d.id_departamento;
+INNER JOIN departamentos d 
+ON e.id_departamento = d.id_departamento;
 
 -- 2. Muestra el nombre de cada proyecto junto con el nombre del cliente al que pertenece.
 SELECT p.nombre AS nombre_proyecto, c.nombre AS nombre_cliente
 FROM proyectos p
-INNER JOIN clientes c ON p.id_cliente = c.id_cliente;
+INNER JOIN clientes c 
+ON p.id_cliente = c.id_cliente;
 
 -- 3. Lista los empleados asignados a proyectos, mostrando nombre del empleado, nombre del proyecto y rol.
 SELECT e.nombre AS nombre_empleado, p.nombre AS nombre_proyecto, a.rol
 FROM empleados e
-INNER JOIN asignaciones a ON e.id_empleado = a.id_empleado
-INNER JOIN proyectos p ON a.id_proyecto = p.id_proyecto;
+INNER JOIN asignaciones a 
+ON e.id_empleado = a.id_empleado
+INNER JOIN proyectos p 
+ON a.id_proyecto = p.id_proyecto;
 
 -- 4. Muestra todos los proyectos junto con el departamento responsable.
 SELECT p.nombre AS nombre_proyecto, d.nombre AS nombre_departamento
 FROM proyectos p
-INNER JOIN departamentos d ON p.id_departamento = d.id_departamento;
+INNER JOIN departamentos d 
+ON p.id_departamento = d.id_departamento;
 
 -- 5. Obtén el nombre del empleado, su puesto y las horas semanales que dedica a cada proyecto.
 SELECT e.nombre AS nombre_empleado, e.puesto, p.nombre AS nombre_proyecto, a.horas_semana
 FROM empleados e
-INNER JOIN asignaciones a ON e.id_empleado = a.id_empleado
-INNER JOIN proyectos p ON a.id_proyecto = p.id_proyecto;
+INNER JOIN asignaciones a 
+ON e.id_empleado = a.id_empleado
+INNER JOIN proyectos p 
+ON a.id_proyecto = p.id_proyecto;
 
 -- 6. Lista los proyectos con cliente y departamento, mostrando: proyecto, cliente y departamento.
 SELECT p.nombre AS nombre_proyecto, c.nombre AS nombre_cliente, d.nombre AS nombre_departamento
 FROM proyectos p
-INNER JOIN clientes c ON p.id_cliente = c.id_cliente
-INNER JOIN departamentos d ON p.id_departamento = d.id_departamento;
+INNER JOIN clientes c 
+ON p.id_cliente = c.id_cliente
+INNER JOIN departamentos d 
+ON p.id_departamento = d.id_departamento;
 
--- =======================
--- CONSULTAS CON LEFT JOIN
--- =======================
+-- ========================
+-- LEFT JOIN
+-- ========================
 
 -- 1. Muestra todos los empleados, aunque no tengan departamento, indicando su departamento si existe.
 SELECT e.nombre, e.apellido, d.nombre AS nombre_departamento
 FROM empleados e
-LEFT JOIN departamentos d ON e.id_departamento = d.id_departamento;
+LEFT JOIN departamentos d 
+ON e.id_departamento = d.id_departamento;
 
 -- 2. Muestra todos los clientes, aunque no tengan proyectos, indicando el nombre del proyecto si existe.
 SELECT c.nombre AS nombre_cliente, p.nombre AS nombre_proyecto
 FROM clientes c
-LEFT JOIN proyectos p ON c.id_cliente = p.id_cliente;
+LEFT JOIN proyectos p 
+ON c.id_cliente = p.id_cliente;
 
 -- 3. Muestra todos los proyectos, aunque no tengan cliente, indicando el cliente si existe.
 SELECT p.nombre AS nombre_proyecto, c.nombre AS nombre_cliente
 FROM proyectos p
-LEFT JOIN clientes c ON p.id_cliente = c.id_cliente;
+LEFT JOIN clientes c 
+ON p.id_cliente = c.id_cliente;
 
 -- 4. Muestra todos los empleados, aunque no estén asignados a ningún proyecto, indicando el proyecto si existe.
 SELECT e.nombre AS nombre_empleado, p.nombre AS nombre_proyecto
 FROM empleados e
-LEFT JOIN asignaciones a ON e.id_empleado = a.id_empleado
-LEFT JOIN proyectos p ON a.id_proyecto = p.id_proyecto;
+LEFT JOIN asignaciones a 
+ON e.id_empleado = a.id_empleado
+LEFT JOIN proyectos p 
+ON a.id_proyecto = p.id_proyecto;
 
 -- 5. Saca un listado de departamentos y los empleados que pertenecen a ellos, pero incluyendo también departamentos sin empleados.
 SELECT d.nombre AS nombre_departamento, e.nombre AS nombre_empleado
 FROM departamentos d
-LEFT JOIN empleados e ON d.id_departamento = e.id_departamento;
+LEFT JOIN empleados e 
+ON d.id_departamento = e.id_departamento;
 
 -- 6. Muestra todos los proyectos y las asignaciones asociadas, incluyendo los proyectos que todavía no tienen empleados asignados.
 SELECT p.nombre AS nombre_proyecto, a.id_empleado, a.rol
 FROM proyectos p
-LEFT JOIN asignaciones a ON p.id_proyecto = a.id_proyecto;
+LEFT JOIN asignaciones a 
+ON p.id_proyecto = a.id_proyecto;
 
 -- ========================
--- CONSULTAS CON RIGHT JOIN
+-- RIGHT JOIN
 -- ========================
 
 -- 1. Usando RIGHT JOIN, muestra todos los departamentos y los empleados que pertenecen a ellos, incluyendo los departamentos sin empleados.
 SELECT d.nombre AS nombre_departamento, e.nombre AS nombre_empleado
 FROM empleados e
-RIGHT JOIN departamentos d ON e.id_departamento = d.id_departamento;
+RIGHT JOIN departamentos d 
+ON e.id_departamento = d.id_departamento;
 
 -- 2. Usando RIGHT JOIN, muestra todos los proyectos y sus asignaciones, incluyendo los proyectos sin asignaciones.
 SELECT p.nombre AS nombre_proyecto, a.rol
 FROM asignaciones a
-RIGHT JOIN proyectos p ON a.id_proyecto = p.id_proyecto;
+RIGHT JOIN proyectos p 
+ON a.id_proyecto = p.id_proyecto;
 
 -- 3. Usando RIGHT JOIN, muestra todos los clientes y sus proyectos, incluyendo clientes sin proyectos.
 SELECT c.nombre AS nombre_cliente, p.nombre AS nombre_proyecto
 FROM proyectos p
-RIGHT JOIN clientes c ON p.id_cliente = c.id_cliente;
+RIGHT JOIN clientes c 
+ON p.id_cliente = c.id_cliente;
 
 -- 4. Usando RIGHT JOIN, muestra todos los departamentos y los proyectos asociados, incluyendo departamentos que no tengan proyectos.
 SELECT d.nombre AS nombre_departamento, p.nombre AS nombre_proyecto
 FROM proyectos p
-RIGHT JOIN departamentos d ON p.id_departamento = d.id_departamento;
+RIGHT JOIN departamentos d 
+ON p.id_departamento = d.id_departamento;
 
--- =======================
--- CONSULTAS CON SELF JOIN
--- =======================
+-- ========================
+-- SELF JOIN
+-- ========================
 
 -- 1. Muestra cada empleado junto con el nombre y apellido de su jefe.
-SELECT 
-    e.nombre AS empleado, 
-    e.apellido AS apellido_empleado, 
-    m.nombre AS jefe, 
-    m.apellido AS apellido_jefe
+SELECT e.nombre AS empleado, e.apellido AS apellido_empleado, m.nombre AS jefe, m.apellido AS apellido_jefe
 FROM empleados e
-LEFT JOIN empleados m ON e.manager_id = m.id_empleado;
+LEFT JOIN empleados m 
+ON e.manager_id = m.id_empleado;
 
 -- 2. Muestra solo los empleados que sí tienen jefe, indicando empleado y jefe.
-SELECT 
-    e.nombre AS empleado, 
-    m.nombre AS jefe
+SELECT e.nombre AS empleado, m.nombre AS jefe
 FROM empleados e
-INNER JOIN empleados m ON e.manager_id = m.id_empleado;
+INNER JOIN empleados m 
+ON e.manager_id = m.id_empleado;
 
 -- 3. Muestra los jefes y cuántos empleados tienen a su cargo.
-SELECT 
-    m.nombre AS jefe, 
-    m.apellido AS apellido_jefe, 
-    COUNT(e.id_empleado) AS num_empleados
+SELECT m.nombre AS jefe, m.apellido AS apellido_jefe, COUNT(e.id_empleado) AS num_empleados
 FROM empleados e
-INNER JOIN empleados m ON e.manager_id = m.id_empleado
+INNER JOIN empleados m 
+ON e.manager_id = m.id_empleado
 GROUP BY m.id_empleado, m.nombre, m.apellido;
 
 -- 4. Muestra parejas de empleados que pertenecen al mismo departamento, evitando que un empleado salga emparejado consigo mismo.
-SELECT 
-    e1.nombre AS empleado_1, 
-    e2.nombre AS empleado_2, 
-    d.nombre AS departamento
+SELECT e1.nombre AS empleado_1, e2.nombre AS empleado_2, d.nombre AS departamento
 FROM empleados e1
-JOIN empleados e2 ON e1.id_departamento = e2.id_departamento
-JOIN departamentos d ON e1.id_departamento = d.id_departamento
+JOIN empleados e2 
+ON e1.id_departamento = e2.id_departamento
+JOIN departamentos d 
+ON e1.id_departamento = d.id_departamento
 WHERE e1.id_empleado < e2.id_empleado;
 
--- ================
--- CONSULTAS EXTRAS
--- ================
+-- ========================
+-- EXTRAS
+-- ========================
 
 -- 1. Muestra los empleados que no tienen departamento.
 SELECT nombre, apellido 
@@ -272,26 +285,27 @@ WHERE id_departamento IS NULL;
 -- 2. Muestra los clientes que no tienen proyectos.
 SELECT c.nombre AS cliente_sin_proyectos
 FROM clientes c
-LEFT JOIN proyectos p ON c.id_cliente = p.id_cliente
+LEFT JOIN proyectos p 
+ON c.id_cliente = p.id_cliente
 WHERE p.id_proyecto IS NULL;
 
 -- 3. Muestra los proyectos que no tienen empleados asignados.
 SELECT p.nombre AS proyecto_sin_empleados
 FROM proyectos p
-LEFT JOIN asignaciones a ON p.id_proyecto = a.id_proyecto
+LEFT JOIN asignaciones a 
+ON p.id_proyecto = a.id_proyecto
 WHERE a.id_empleado IS NULL;
 
 -- 4. Muestra los empleados que no participan en ningún proyecto.
 SELECT e.nombre, e.apellido
 FROM empleados e
-LEFT JOIN asignaciones a ON e.id_empleado = a.id_empleado
+LEFT JOIN asignaciones a 
+ON e.id_empleado = a.id_empleado
 WHERE a.id_proyecto IS NULL;
 
 -- 5. Muestra los empleados y la suma total de horas semanales que tienen asignadas en proyectos.
-SELECT 
-    e.nombre, 
-    e.apellido, 
-    COALESCE(SUM(a.horas_semana), 0) AS total_horas_semanales
+SELECT e.nombre, e.apellido, COALESCE(SUM(a.horas_semana), 0) AS total_horas_semanales
 FROM empleados e
-LEFT JOIN asignaciones a ON e.id_empleado = a.id_empleado
+LEFT JOIN asignaciones a 
+ON e.id_empleado = a.id_empleado
 GROUP BY e.id_empleado, e.nombre, e.apellido;
