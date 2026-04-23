@@ -1,0 +1,36 @@
+{
+    "videojuegos": [
+        {
+            "titulo": "Minecraft",
+            "genero": "Sandbox",
+            "precio": 26.95,
+            "imagen": "img/minecraft.png",
+            "multijugador": true,
+            "individual": true
+        },
+        {
+            "titulo": "Hollow Knight",
+            "genero": "Metroidvania",
+            "imagen": "img/hollowknight.png",
+            "precio": 14.99,
+            "multijugador": false,
+            "individual": false
+        },
+        {
+            "titulo": "Stardew Valley",
+            "genero": "Simulación",
+            "imagen": "img/stardewvalley.png",
+            "precio": 13.99,
+            "multijugador": true,
+            "individual": true
+        },
+        {
+            "titulo": "Celeste",
+            "genero": "Plataformas",
+            "imagen": "img/celeste.png",
+            "precio": 19.99,
+            "multijugador": false,
+            "individual": true
+        }
+    ]
+}

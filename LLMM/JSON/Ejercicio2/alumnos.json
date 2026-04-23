@@ -1,0 +1,34 @@
+{
+    "alumnos": [
+        {
+            "nombre": "Ana",
+            "edad": 19,
+            "curso": "1º DAW",
+            "notaMedia": 8.2
+        },
+        {
+            "nombre": "Carlos",
+            "edad": 20,
+            "curso": "1º DAW",
+            "notaMedia": 4.5
+        },
+        {
+            "nombre": "Lucía",
+            "edad": 18,
+            "curso": "1º DAW",
+            "notaMedia": 6.7
+        },
+        {
+            "nombre": "Mario",
+            "edad": 21,
+            "curso": "1º DAW",
+            "notaMedia": 3.9
+        },
+        {
+            "nombre": "Elena",
+            "edad": 19,
+            "curso": "1º DAW",
+            "notaMedia": 7.4
+        }
+    ]
+}
