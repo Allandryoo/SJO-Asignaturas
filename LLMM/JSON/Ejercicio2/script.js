@@ -9,7 +9,6 @@ async function cargarAlumnos() {
 
 datos.alumnos.array.forEach(alumno => {
     alumnos +=
-    
 });
 
 function mostrarAlumnos(lista) {
