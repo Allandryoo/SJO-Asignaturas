@@ -1,14 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserCardComponent } from "./components/app-product-card/app-product-card";
-
+import { PerfilCardComponent } from './components/perfil/perfil';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,
-    UserCardComponent],
+  imports: [RouterOutlet, UserCardComponent, PerfilCardComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('primer-proyecto');
+  protected readonly title = signal('Tienda de productos');
 }
