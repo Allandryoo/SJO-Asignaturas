@@ -1,0 +1,104 @@
+{
+    "canciones": [
+        {
+            "titulo": "AL GOLPITO",
+            "artista": "Quevedo, Nueva Linea",
+            "imagen": "../assets/canciones/Al-golpito.jpg"
+        },
+        {
+            "titulo": "Ricky Bobby",
+            "artista": "Eladio Carrion",
+            "imagen": "../assets/canciones/Ricky-bobby.jpg"
+        },
+        {
+            "titulo": "Billie Jean",
+            "artista": "Michael Jackson",
+            "imagen": "../assets/canciones/billie-jean.jpg"
+        },
+        {
+            "titulo": "MANSORY",
+            "artista": "DYSTINCT, Morad",
+            "imagen": "../assets/canciones/mansory.jpg"
+        },
+        {
+            "titulo": "TOPURIA",
+            "artista": "Maikel Delacalle, JC Reyes, Almighty",
+            "imagen": "../assets/canciones/topuria.jpg"
+        },
+        {
+            "titulo": "Te Entiendo - Remix",
+            "artista": "Maisak, Feid, Maluma",
+            "imagen": "../assets/canciones/te-entiendo.jpg"
+        },
+        {
+            "titulo": "Sin Pena",
+            "artista": "Bebeshito, Rey Tony, Helabusador, DJ Honda",
+            "imagen": "../assets/canciones/sin-pena.jpg"
+        },
+        {
+            "titulo": "Bring Your Love",
+            "artista": "Madonna, Sabrina Carpenter",
+            "imagen": "../assets/canciones/bring-your-love.jpg"
+        },
+        {
+            "titulo": "MEDUSA REMIX",
+            "artista": "Neo Pistea, Duki, KHEA, Pablo Chill-E",
+            "imagen": "../assets/canciones/medusa.jpg"
+        },
+        {
+            "titulo": "MALASNOTICIAS.",
+            "artista": "Alvaro Diaz, LATIN MAFIA",
+            "imagen": "../assets/canciones/malasnoticias.jpg"
+        },    
+        {
+            "titulo": "Eurosummer - Girls Trip",
+            "artista": "Zara Larsson, Shakira",
+            "imagen": "../assets/canciones/eurosummer.jpg"
+        },
+        {
+            "titulo": "La Morocha",
+            "artista": "Luck Ra, BM",
+            "imagen": "../assets/canciones/morocha.jpg"
+        },
+        {
+            "titulo": "PUERTO RICO",
+            "artista": "Lyanno, La Pantera",
+            "imagen": "../assets/canciones/puerto-rico.jpg"
+        },
+        {
+            "titulo": "No entiendo las normas",
+            "artista": "John Pollon",
+            "imagen": "../assets/canciones/no-entiendo-las-normas.jpg"
+        },
+        {
+            "titulo": "I Want You Back",
+            "artista": "The Jackson 5",
+            "imagen": "../assets/canciones/want-you-back.jpg"
+        },
+        {
+            "titulo": "PIRINEOS",
+            "artista": "L'haine, Hoke",
+            "imagen": "../assets/canciones/pirineos.jpg"
+        },
+        {
+            "titulo": "NO LE DIGO QUE NO",
+            "artista": "Los Buyer, Pikeras",
+            "imagen": "../assets/canciones/no-le-digo-que-no.jpg"
+        },
+        {
+            "titulo": "WoW",
+            "artista": "Yk It's Junaa",
+            "imagen": "../assets/canciones/wow.jpg"
+        },
+        {
+            "titulo": "A La Sombra De Una Higuera",
+            "artista": "Manuel Carrasco",
+            "imagen": "../assets/canciones/a-la-sombra-de-una-higuera.jpg"
+        },
+        {
+            "titulo": "Skokka",
+            "artista": "Huan62",
+            "imagen": "../assets/canciones/skokka.jpg"
+        }
+    ]
+}

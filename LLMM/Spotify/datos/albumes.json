@@ -1,0 +1,54 @@
+{
+    "albumes": [
+        {
+            "titulo": "DeBÍ TiRAR MáS FOToS",
+            "artista": "Bad Bunny",
+            "imagen": "../assets/albumes/debi-tirar-mas-fotos.jpg"
+        },
+        {
+            "titulo": "LO MISMO DE SIEMPRE",
+            "artista": "Mora",
+            "imagen": "../assets/albumes/lo-mismo-de-siempre.jpg"
+        },
+        {
+            "titulo": "CUARTO AZUL",
+            "artista": "Aitana",
+            "imagen": "../assets/albumes/cuarto-azul.jpg"
+        },
+        {
+            "titulo": "BUENAS NOCHES",
+            "artista": "Quevedo",
+            "imagen": "../assets/albumes/buenas-noches.jpg"
+        },
+        {
+            "titulo": "BORONDO",
+            "artista": "Beéle",
+            "imagen": "../assets/albumes/borondo.jpg"
+        },
+        {
+            "titulo": "Un verano sin ti",
+            "artista": "Bad Bunny",
+            "imagen": "../assets/albumes/un-verano-sin-ti.jpg"
+        },
+        {
+            "titulo": "NACER DE NUEVO",
+            "artista": "JC Reyes",
+            "imagen": "../assets/albumes/nacer-de-nuevo.jpg"
+        },
+        {
+            "titulo": "LA CIUDAD",
+            "artista": "Alleh, Yorghaki",
+            "imagen": "../assets/albumes/la-ciudad.jpg"
+        },
+        {
+            "titulo": "Easy Money Baby",
+            "artista": "Myke Towers",
+            "imagen": "../assets/albumes/easy-money-baby.jpg"
+        },
+        {
+            "titulo": "PRIMERA MUSA",
+            "artista": "Omar Courtz",
+            "imagen": "../assets/albumes/primera-musa.jpg"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "listas": [
+        {
+            "nombre": "Tu actualización semanal de las...",
+            "imagen": "../assets/listas/top-canciones-globales.jpg"
+        },
+        {
+            "nombre": "Tu actualización semanal de las...",
+            "imagen": "../assets/listas/top-canciones-espana.jpg"
+        },
+        {
+            "nombre": "Tu actualización diaria de las canciones más...",
+            "imagen": "../assets/listas/top-50-global.jpg"
+        },   
+        {
+            "nombre": "Tu actualización diaria de las canciones más...",
+            "imagen": "../assets/listas/top-50-espana.jpg"
+        },   
+        {
+            "nombre": "Tu actualización diaria de las canciones más...",
+            "imagen": "../assets/listas/viral-50-global.jpg"
+        },
+        {
+            "nombre": "Tu actualización diaria de las canciones más...",
+            "imagen": "../assets/listas/viral-50-espana.jpg"
+        }   
+    ]    
+}
