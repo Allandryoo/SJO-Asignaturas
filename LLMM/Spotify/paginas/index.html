@@ -1,44 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleForm.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <title>Reproductor web de spotify: música para todo el mundo</title>
 </head>
+
 <body>
-    <form class="inicio-sesion">
-        <label for="name">Nombre de usuario</label>
-        <input type="text" id="name" name="name">
-
-        <label for="email">Correo electronico</label>
-        <input type="text" id="email" name="email">
-        
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password">
-        
-        <button type="submit">Iniciar sesión</button>
-    </form>
-
-    <form class="registrar">
-        <label for="name">Nombre de usuario</label>
-        <input type="text" id="name" name="name">
-
-        <label for="email">Correo electronico</label>
-        <input type="text" id="email" name="email">
-        
-        <label for="password">Contraseña</label>
-        <input type="password" id="pass" name="password">
-        
-        <label for="confirmar-password">Confirmar contraseña</label>
-        <input type="password" id="conf-pass" name="confirmar-password">
-
-        <button type="submit">Registrarse</button>
-    </form>
-
+    <div id="formulario">
+    </div>
     <section class="caja-contenedor-principal">
 
         <header class="header">
@@ -77,7 +52,7 @@
                     Iniciar sesión
                 </button>
             </div>
-            
+
         </header>
 
         <section class="contenedor-izquierdo">
@@ -107,8 +82,8 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+
             <div class="sec-izq-pie">
                 <div class="contenedor-enlaces">
                     <a href="#">Legal</a>
@@ -129,35 +104,45 @@
         <section class="contenedor-derecho">
 
             <div class="cabecera-cancion">
-                <a href="#"><h2>Canciones en tendencia</h2></a>
+                <a href="#">
+                    <h2>Canciones en tendencia</h2>
+                </a>
                 <a href="" class="mostrar-todos">Mostrar todos</a>
             </div>
             <div id="canciones" class="contenido-cancion">
             </div>
-        
+
             <div class="cabecera-cancion">
-                <a href="#"><h2>Artistas populares</h2></a>
+                <a href="#">
+                    <h2>Artistas populares</h2>
+                </a>
                 <a href="" class="mostrar-todos">Mostrar todos</a>
             </div>
-            <div id="artistas" class="contenido-cancion"> 
+            <div id="artistas" class="contenido-cancion">
             </div>
 
             <div class="cabecera-cancion">
-                <a href="#"><h2>Álbumes y sencillos populares</h2></a>
+                <a href="#">
+                    <h2>Álbumes y sencillos populares</h2>
+                </a>
                 <a href="" class="mostrar-todos">Mostrar todos</a>
             </div>
             <div id="albumes" class="contenido-cancion">
             </div>
 
             <div class="cabecera-cancion">
-                <a href="#"><h2>Emisoras populares</h2></a>
+                <a href="#">
+                    <h2>Emisoras populares</h2>
+                </a>
                 <a href="" class="mostrar-todos">Mostrar todos</a>
             </div>
             <div id="emisoras" class="contenido-cancion">
             </div>
 
             <div class="cabecera-cancion">
-                <a href="#"><h2>Listas seleccionadas</h2></a>
+                <a href="#">
+                    <h2>Listas seleccionadas</h2>
+                </a>
                 <a href="" class="mostrar-todos">Mostrar todos</a>
             </div>
             <div id="listas" class="contenido-cancion">
@@ -207,7 +192,8 @@
         <section class="footer">
             <div>
                 <p>Muestra de Spotify</p>
-                <p>Regístrate para disfrutar de canciones y podcasts sin límites, con anuncios ocasionales. No hace falta tarjeta de crédito.</p>
+                <p>Regístrate para disfrutar de canciones y podcasts sin límites, con anuncios ocasionales. No hace
+                    falta tarjeta de crédito.</p>
             </div>
             <button>Registrate gratis</button>
         </section>
@@ -216,4 +202,5 @@
     <script src="../scripts/script.js"></script>
     <script src="../scripts/verificacion.js"></script>
 </body>
+
 </html>

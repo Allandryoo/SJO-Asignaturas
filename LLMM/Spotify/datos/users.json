@@ -1,0 +1,54 @@
+{
+    "users": [
+        {
+            "nombre": "Allandryo",
+            "correo": "allandryo@gmail.com",
+            "contraseña": "allandryo123"
+        },
+        {
+            "nombre": "Good Boy",
+            "correo": "goodboy@gmail.com",
+            "contraseña": "goodboy123"
+        },
+        {
+            "nombre": "Leslie",
+            "correo": "leslie@gmail.com",
+            "contraseña": "leslie123"
+        },
+        {
+            "nombre": "Pau",
+            "correo": "pau@gmail.com",
+            "contraseña": "pau123"
+        },
+        {
+            "nombre": "Bob Esponja",
+            "correo": "bobesponja@gmail.com",
+            "contraseña": "bobesponja123"
+        },
+        {
+            "nombre": "Carlos",
+            "correo": "carlos@gmail.com",
+            "contraseña": "carlos123"
+        },
+        {
+            "nombre": "Ionut",
+            "correo": "ionut@gmail.com",
+            "contraseña": "ionut123"
+        },
+        {
+            "nombre": "Cayetano",
+            "correo": "cayetano@gmail.com",
+            "contraseña": "cayetano123"
+        },
+        {
+            "nombre": "Sergio Cubo",
+            "correo": "sergiocubo@gmail.com",
+            "contraseña": "sergiocubo123"
+        },
+        {
+            "nombre": "Felu",
+            "correo": "felu@gmail.com",
+            "contraseña": "felu123"
+        }
+    ]
+}
