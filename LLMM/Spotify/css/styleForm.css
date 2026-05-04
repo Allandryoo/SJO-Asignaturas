@@ -1,0 +1,42 @@
+form {
+    margin-top: 20%;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f1f1f;
+    color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 50px;
+    gap: 20px;
+}
+
+form, label {
+    align-items: flex-start;
+}
+
+button {
+    align-self: center;
+    background-color: green;
+}
+
+.inicio-sesion.visible {
+    display: flex;
+    z-index: 1;
+}
+
+.registrar.visible {
+    display: flex;
+    z-index: 1;
+}
+
+.inicio-sesion.ocultar {
+    display: none;
+}
+
+.registrar.ocultar {
+    display: none;
+}
