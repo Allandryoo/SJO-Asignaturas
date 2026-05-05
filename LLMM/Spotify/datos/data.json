@@ -1,0 +1,266 @@
+{
+    "canciones": [
+        {
+            "titulo": "AL GOLPITO",
+            "artista": "Quevedo, Nueva Linea",
+            "imagen": "../assets/canciones/Al-golpito.jpg"
+        },
+        {
+            "titulo": "Ricky Bobby",
+            "artista": "Eladio Carrion",
+            "imagen": "../assets/canciones/Ricky-bobby.jpg"
+        },
+        {
+            "titulo": "Billie Jean",
+            "artista": "Michael Jackson",
+            "imagen": "../assets/canciones/billie-jean.jpg"
+        },
+        {
+            "titulo": "MANSORY",
+            "artista": "DYSTINCT, Morad",
+            "imagen": "../assets/canciones/mansory.jpg"
+        },
+        {
+            "titulo": "TOPURIA",
+            "artista": "Maikel Delacalle, JC Reyes, Almighty",
+            "imagen": "../assets/canciones/topuria.jpg"
+        },
+        {
+            "titulo": "Te Entiendo - Remix",
+            "artista": "Maisak, Feid, Maluma",
+            "imagen": "../assets/canciones/te-entiendo.jpg"
+        },
+        {
+            "titulo": "Sin Pena",
+            "artista": "Bebeshito, Rey Tony, Helabusador, DJ Honda",
+            "imagen": "../assets/canciones/sin-pena.jpg"
+        },
+        {
+            "titulo": "Bring Your Love",
+            "artista": "Madonna, Sabrina Carpenter",
+            "imagen": "../assets/canciones/bring-your-love.jpg"
+        },
+        {
+            "titulo": "MEDUSA REMIX",
+            "artista": "Neo Pistea, Duki, KHEA, Pablo Chill-E",
+            "imagen": "../assets/canciones/medusa.jpg"
+        },
+        {
+            "titulo": "MALASNOTICIAS.",
+            "artista": "Alvaro Diaz, LATIN MAFIA",
+            "imagen": "../assets/canciones/malasnoticias.jpg"
+        },
+        {
+            "titulo": "Eurosummer - Girls Trip",
+            "artista": "Zara Larsson, Shakira",
+            "imagen": "../assets/canciones/eurosummer.jpg"
+        },
+        {
+            "titulo": "La Morocha",
+            "artista": "Luck Ra, BM",
+            "imagen": "../assets/canciones/morocha.jpg"
+        },
+        {
+            "titulo": "PUERTO RICO",
+            "artista": "Lyanno, La Pantera",
+            "imagen": "../assets/canciones/puerto-rico.jpg"
+        },
+        {
+            "titulo": "No entiendo las normas",
+            "artista": "John Pollon",
+            "imagen": "../assets/canciones/no-entiendo-las-normas.jpg"
+        },
+        {
+            "titulo": "I Want You Back",
+            "artista": "The Jackson 5",
+            "imagen": "../assets/canciones/want-you-back.jpg"
+        },
+        {
+            "titulo": "PIRINEOS",
+            "artista": "L'haine, Hoke",
+            "imagen": "../assets/canciones/pirineos.jpg"
+        },
+        {
+            "titulo": "NO LE DIGO QUE NO",
+            "artista": "Los Buyer, Pikeras",
+            "imagen": "../assets/canciones/no-le-digo-que-no.jpg"
+        },
+        {
+            "titulo": "WoW",
+            "artista": "Yk It's Junaa",
+            "imagen": "../assets/canciones/wow.jpg"
+        },
+        {
+            "titulo": "A La Sombra De Una Higuera",
+            "artista": "Manuel Carrasco",
+            "imagen": "../assets/canciones/a-la-sombra-de-una-higuera.jpg"
+        },
+        {
+            "titulo": "Skokka",
+            "artista": "Huan62",
+            "imagen": "../assets/canciones/skokka.jpg"
+        }
+    ],
+    "artistas": [
+        {
+            "nombre": "Bad Bunny",
+            "imagen": "../assets/artistas/bad-bunny.jpg"
+        },
+        {
+            "nombre": "Myke Towers",
+            "imagen": "../assets/artistas/myke-towers.jpg"
+        },
+        {
+            "nombre": "KAROL G",
+            "imagen": "../assets/artistas/karol-g.jpg"
+        },
+        {
+            "nombre": "Rauw Alejandro",
+            "imagen": "../assets/artistas/rauw-alejandro.jpg"
+        },
+        {
+            "nombre": "Quevedo",
+            "imagen": "../assets/artistas/quevedo.jpg"
+        },
+        {
+            "nombre": "Mora",
+            "imagen": "../assets/artistas/mora.jpg"
+        },
+        {
+            "nombre": "JC Reyes",
+            "imagen": "../assets/artistas/jcreyes.jpg"
+        },
+        {
+            "nombre": "W Sound",
+            "imagen": "../assets/artistas/wsound.jpg"
+        },
+        {
+            "nombre": "Ozuna",
+            "imagen": "../assets/artistas/ozuna.jpg"
+        },
+        {
+            "nombre": "Aitana",
+            "imagen": "../assets/artistas/aitana.jpg"
+        }
+    ],
+    "albumes": [
+        {
+            "titulo": "DeBÍ TiRAR MáS FOToS",
+            "artista": "Bad Bunny",
+            "imagen": "../assets/albumes/debi-tirar-mas-fotos.jpg"
+        },
+        {
+            "titulo": "LO MISMO DE SIEMPRE",
+            "artista": "Mora",
+            "imagen": "../assets/albumes/lo-mismo-de-siempre.jpg"
+        },
+        {
+            "titulo": "CUARTO AZUL",
+            "artista": "Aitana",
+            "imagen": "../assets/albumes/cuarto-azul.jpg"
+        },
+        {
+            "titulo": "BUENAS NOCHES",
+            "artista": "Quevedo",
+            "imagen": "../assets/albumes/buenas-noches.jpg"
+        },
+        {
+            "titulo": "BORONDO",
+            "artista": "Beéle",
+            "imagen": "../assets/albumes/borondo.jpg"
+        },
+        {
+            "titulo": "Un verano sin ti",
+            "artista": "Bad Bunny",
+            "imagen": "../assets/albumes/un-verano-sin-ti.jpg"
+        },
+        {
+            "titulo": "NACER DE NUEVO",
+            "artista": "JC Reyes",
+            "imagen": "../assets/albumes/nacer-de-nuevo.jpg"
+        },
+        {
+            "titulo": "LA CIUDAD",
+            "artista": "Alleh, Yorghaki",
+            "imagen": "../assets/albumes/la-ciudad.jpg"
+        },
+        {
+            "titulo": "Easy Money Baby",
+            "artista": "Myke Towers",
+            "imagen": "../assets/albumes/easy-money-baby.jpg"
+        },
+        {
+            "titulo": "PRIMERA MUSA",
+            "artista": "Omar Courtz",
+            "imagen": "../assets/albumes/primera-musa.jpg"
+        }
+    ],
+    "emisoras": [
+        {
+            "nombre": "Con Feid, Manuel Turizo, Bad Bunny y...",
+            "imagen": "../assets/emisoras/karol.jpg"
+        },
+        {
+            "nombre": "Con Arcangel, KAROL G, Feid y mas",
+            "imagen": "../assets/emisoras/badBunny.jpg"
+        },
+        {
+            "nombre": "Con Ed Sheeran, Harry Styles, Adele y mas",
+            "imagen": "../assets/emisoras/coldPlay.jpg"
+        },
+        {
+            "nombre": "Con Ozuna, Ovy on the Drums, Alleh y...",
+            "imagen": "../assets/emisoras/beele.jpg"
+        },
+        {
+            "nombre": "Con Ed Sheeran, Justin Bieber, Katy...",
+            "imagen": "../assets/emisoras/brunoMars.jpg"
+        },
+        {
+            "nombre": "Con Los Delinquentes, Amaral, Extremodur...",
+            "imagen": "../assets/emisoras/estopa.jpg"
+        },
+        {
+            "nombre": "Con Viva Suecia, IZAL, Lori Meyers y más",
+            "imagen": "../assets/emisoras/ardeBogota.jpg"
+        },
+        {
+            "nombre": "De Spotify",
+            "imagen": "../assets/emisoras/melendi.jpg"
+        },
+        {
+            "nombre": "Con Viva Suecia, IZAL, Vetusta Morla y más",
+            "imagen": "../assets/emisoras/leiva.jpg"
+        },
+        {
+            "nombre": "De Spotify",
+            "imagen": "../assets/emisoras/fito.jpg"
+        }
+    ],
+    "listas": [
+        {
+            "nombre": "Tu actualización semanal de las...",
+            "imagen": "../assets/listas/top-canciones-globales.jpg"
+        },
+        {
+            "nombre": "Tu actualización semanal de las...",
+            "imagen": "../assets/listas/top-canciones-espana.jpg"
+        },
+        {
+            "nombre": "Tu actualización diaria de las canciones más...",
+            "imagen": "../assets/listas/top-50-global.jpg"
+        },
+        {
+            "nombre": "Tu actualización diaria de las canciones más...",
+            "imagen": "../assets/listas/top-50-espana.jpg"
+        },
+        {
+            "nombre": "Tu actualización diaria de las canciones más...",
+            "imagen": "../assets/listas/viral-50-global.jpg"
+        },
+        {
+            "nombre": "Tu actualización diaria de las canciones más...",
+            "imagen": "../assets/listas/viral-50-espana.jpg"
+        }
+    ]
+}

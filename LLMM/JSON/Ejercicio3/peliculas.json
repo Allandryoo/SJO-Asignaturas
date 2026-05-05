@@ -1,0 +1,34 @@
+{
+    "peliculas": [
+        {
+            "titulo": "Interstellar",
+            "director": "Christopher Nolan",
+            "anio": 2014,
+            "genero": "Ciencia ficción"
+        },
+        {
+            "titulo": "Inception",
+            "director": "Christopher Nolan",
+            "anio": 2010,
+            "genero": "Ciencia ficción"
+        },
+        {
+            "titulo": "Whiplash",
+            "director": "Damien Chazelle",
+            "anio": 2014,
+            "genero": "Drama"
+        },
+        {
+            "titulo": "Dune",
+            "director": "Denis Villeneuve",
+            "anio": 2021,
+            "genero": "Ciencia ficción"
+        },
+        {
+            "titulo": "The Batman",
+            "director": "Matt Reeves",
+            "anio": 2022,
+            "genero": "Acción"
+        }
+    ]
+}
