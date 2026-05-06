@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  grafito:
+    image: grafana/grafana:latest
+    container_name: grafito
+    ports:
+      - "3001:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+    networks:
+      - grafana-network
+
+volumes:
+  grafana-data:
+
+networks:
+  grafana-network:
+    driver: bridge
