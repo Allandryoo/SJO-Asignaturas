@@ -5,18 +5,23 @@ public class Main {
         Jugador player2 = new Jugador("good boy", 8, 0);
 
         Partida partida1 = new Partida(juego, player1, player2);
-        Partida partida2 = new Partida(juego, player1, player2);
-        Partida partida3 = new Partida(juego, player1, player2);
 
         Partida[] partidas = new Partida[3];
 
-        partidas[0] = partida1;
-        partidas[1] = partida2;
-        partidas[2] = partida3;
+        for(int i =0 ; i < 3; i++){
+            partidas[i]=partida1;
+        }
+
         while (player1.puntosAcumulados < juego.PuntosVictoria && player2.puntosAcumulados < juego.PuntosVictoria){
             for (int i = 0; i < partidas.length-1; i++) {
                 partidas[i].iniciarPartida();
             }
+        }
+
+        if(player1.puntosAcumulados >= player2.puntosAcumulados){
+            System.out.println("Gran campeon " + player1.nickname);
+        }else {
+            System.out.println("Gran campeon " + player2.nickname);
         }
     }
 }

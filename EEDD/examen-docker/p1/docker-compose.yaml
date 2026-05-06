@@ -1,5 +1,3 @@
-
-
 services:
   DoD:
     container_name: DoD

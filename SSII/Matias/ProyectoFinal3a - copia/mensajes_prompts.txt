@@ -1,7 +1,7 @@
 
 PROMPT 1: Creación del Memory Bank
 ------------------------------------------------------------------------
-"Lee las instrucciones del archivo inicial.md. Crea la carpeta memory-bank/ con los 4 archivos obligatorios: productContext.md (definiendo la visión de una autoescuela para aprender hardware y sistemas), systemPatterns.md (definiendo la arquitectura donde components.js tiene funciones puras y app.js la lógica), activeContext.md y progress.md. Escribe el contenido inicial para cada uno."
+"Lee las instrucciones del archivo inicial.md antes de ejecutar alguna instruccion. Crea la carpeta memory-bank/ con los 4 archivos obligatorios: productContext.md (definiendo la visión de una autoescuela para aprender hardware y sistemas), systemPatterns.md (definiendo la arquitectura donde components.js tiene funciones puras y app.js la lógica), activeContext.md y progress.md. Escribe el contenido inicial para cada uno."
 
 PROMPT 2: Creación del banco de preguntas
 ------------------------------------------------------------------------

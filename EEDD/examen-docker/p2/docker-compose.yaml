@@ -1,0 +1,32 @@
+services:
+  app:
+    container_name: flask_app
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres123@postgres:5432/mydb
+      - FLASK_APP=app/index.py
+    networks:
+      - flask-network
+
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_DB: mydb
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - flask-network
+
+volumes:
+  postgres-data:
+
+networks:
+  flask-network:
+    driver: bridge
