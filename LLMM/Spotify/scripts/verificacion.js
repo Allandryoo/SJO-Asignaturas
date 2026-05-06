@@ -1,101 +1,118 @@
 const btnIniciarSesion = document.querySelector("#BtnIniciarSesion");
 const formulario = document.querySelector("#formulario");
 const btnCrearLista = document.querySelector(".sec-izq-caja button");
+let regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$/;
 
-// Función para mostrar el formulario de login
-function mostrarFormulario() {
+let sesionIniciada = false;
+
+async function mostrarFormulario() {
+    if (sesionIniciada) {
+        sesionIniciada = false;
+        btnIniciarSesion.textContent = "Iniciar sesión";
+        return;
+    }
+    const response = await fetch("../datos/data.json");
+    const data = await response.json();
+
+    const IniciarSesion = data.form[0].nombre;
+    const textoEmail = data.form[0].correo;
+    const textoPassword = data.form[0].contraseña;
+    const textoBoton = data.form[0].botonContinuar;
+
     formulario.innerHTML = `
         <div id="overlay"></div>
         <form>
-            <h2>Iniciar Sesión</h2>
+            <img src="../img/logo2.svg" alt="Spotify" class="logo-form">
+            <h2>${IniciarSesion}</h2>
 
-            <label for="email">Correo electrónico</label>
+            <label for="email">${textoEmail}</label>
             <input type="text" id="email" name="email" placeholder="nombre@ejemplo.com">
             <span id="errorEmail"></span>
 
-            <label for="password">Contraseña</label>
+            <label for="password">${textoPassword}</label>
             <input type="password" id="password" name="password" placeholder="Contraseña">
-            <span id="error"></span>
+            <span id="errorPassword"></span>
 
-            <button type="submit">Iniciar sesión</button>
+            <span id="errorGeneral"></span>
+
+            <button type="submit">${textoBoton}</button>
             <button type="button" id="btnCerrar">Cancelar</button>
         </form>
     `;
 
-    // Botón para cerrar el formulario
     document.querySelector("#btnCerrar").addEventListener("click", () => {
         formulario.innerHTML = "";
     });
 
-    // Cerrar al hacer click en el overlay (fondo oscuro)
     document.querySelector("#overlay").addEventListener("click", () => {
         formulario.innerHTML = "";
     });
+    document.querySelector("form").addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const emailInput = document.querySelector("#email");
+        const passwordInput = document.querySelector("#password");
+        const errorEmail = document.querySelector("#errorEmail");
+        const errorPassword = document.querySelector("#errorPassword");
+        const errorGeneral = document.querySelector("#errorGeneral");
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        errorEmail.textContent = "";
+        errorPassword.textContent = "";
+        errorGeneral.textContent = "";
+
+        let hayError = false;
+
+        if (email === "") {
+            errorEmail.textContent = "El correo electrónico no puede estar vacío";
+            hayError = true;
+        } else if (!regexEmail.test(email)) {
+            errorEmail.textContent = 'El correo debe tener un formato válido (ej: nombre@ejemplo.com)';
+            hayError = true;
+        }
+
+        if (password === "") {
+            errorPassword.textContent = "La contraseña no puede estar vacía";
+            hayError = true;
+        }
+
+        if (hayError) {
+            return;
+        }
+
+        const loginCorrecto = await iniciarSesion(email, password);
+
+        if (loginCorrecto) {
+            formulario.innerHTML = "";
+            sesionIniciada = true;
+            btnIniciarSesion.textContent = "Cerrar sesión";
+        } else {
+            errorGeneral.textContent = "Correo electrónico o contraseña incorrectos";
+        }
+    });
 }
 
-// Botón "Iniciar sesión" del header
+
 btnIniciarSesion.addEventListener("click", () => {
     mostrarFormulario();
 });
 
-// Botón "Crear lista" de la sección izquierda
-if (btnCrearLista) {
-    btnCrearLista.addEventListener("click", () => {
-        mostrarFormulario();
-    });
-}
 
-// Click en cualquier tarjeta (.tarjeta) muestra el login
+btnCrearLista.addEventListener("click", () => {
+    mostrarFormulario();
+});
 document.addEventListener("click", (event) => {
     if (event.target.closest(".tarjeta")) {
         mostrarFormulario();
     }
 });
 
-// Validar email: debe contener "@" y acabar en ".com"
-function validarEmail(email) {
-    return email.includes("@") && email.endsWith(".com");
-}
-
-// Envío del formulario (delegación de eventos porque el form se inyecta dinámicamente)
-formulario.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const emailInput = document.querySelector("#email");
-    const passwordInput = document.querySelector("#password");
-    const errorEmail = document.querySelector("#errorEmail");
-    const errorGeneral = document.querySelector("#error");
-
-    const email = emailInput.value.trim();
-    const password = passwordInput.value;
-
-    // Limpiar errores previos
-    errorEmail.textContent = "";
-    errorGeneral.textContent = "";
-
-    // Validar formato del email
-    if (!validarEmail(email)) {
-        errorEmail.textContent = 'El correo debe contener "@" y acabar en ".com"';
-        return;
-    }
-
-    // Comprobar credenciales contra users.json
-    const loginCorrecto = await iniciarSesion(email, password);
-
-    if (loginCorrecto) {
-        formulario.innerHTML = "";
-        alert("¡Inicio de sesión correcto! Bienvenido.");
-    } else {
-        errorGeneral.textContent = "Correo electrónico o contraseña incorrectos";
-    }
-});
-
-// Función async que comprueba las credenciales en users.json
 async function iniciarSesion(email, password) {
     const response = await fetch("../datos/users.json");
     const data = await response.json();
 
-    // Buscar un usuario cuyo correo Y contraseña coincidan
     const usuario = data.users.find(
         (user) => user.correo === email && user.contraseña === password
     );
