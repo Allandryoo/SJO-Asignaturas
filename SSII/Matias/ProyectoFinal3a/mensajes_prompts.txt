@@ -1,0 +1,20 @@
+
+PROMPT 1: Creación del Memory Bank
+------------------------------------------------------------------------
+"Lee las instrucciones del archivo inicial.md. Crea la carpeta memory-bank/ con los 4 archivos obligatorios: productContext.md (definiendo la visión de una autoescuela para aprender hardware y sistemas), systemPatterns.md (definiendo la arquitectura donde components.js tiene funciones puras y app.js la lógica), activeContext.md y progress.md. Escribe el contenido inicial para cada uno."
+
+PROMPT 2: Creación del banco de preguntas
+------------------------------------------------------------------------
+"Basándote en la visión del proyecto en memory-bank/productContext.md, crea el archivo questions.js. Debe contener un array de objetos con al menos 25 preguntas de opción múltiple, divididas en 5 categorías clave de la asignatura: comandos Windows, comandos Linux, hardware, redes IP y contenedores. Solo exporta los datos, sin lógica."
+
+PROMPT 3: Creación de los componentes visuales
+------------------------------------------------------------------------
+"Revisa las reglas técnicas en memory-bank/systemPatterns.md. Necesito que crees el archivo components.js. Debe contener funciones puras que reciban datos y devuelvan strings de HTML. Crea al menos los siguientes componentes modulares: una pantalla de bienvenida (createWelcomeScreen), la tarjeta del test (createQuestionCard) y el panel de resultados (createResultsPanel)."
+
+PROMPT 4: Creación de la lógica principal y orquestación
+------------------------------------------------------------------------
+"Siguiendo estrictamente la arquitectura definida en memory-bank/systemPatterns.md, crea el archivo app.js. Este archivo debe tener un estado centralizado, manejar los eventos usando event delegation sobre un contenedor principal, y encargarse de orquestar la aplicación llamando a las funciones puras de components.js. Actualiza memory-bank/progress.md cuando termines."
+
+PROMPT 5: Estilos y estructura principal
+------------------------------------------------------------------------
+"Para finalizar la interfaz, crea el archivo index.html que cargue los scripts en el orden correcto y proporcione el contenedor principal. Además, crea el archivo style.css aplicando un diseño moderno, con tema oscuro, efecto glassmorphism y colores neón (verde para aciertos, rojo para fallos), adecuado para la temática técnica descrita en el Memory Bank."

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autoescuela de Sistemas 3 AVA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <h1>Autoescuela de Sistemas</h1>
+    </header>
+    <main id="app-container" class="app-container">
+    </main>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof questions !== 'undefined') {
+        App.init(questions);
+      } else {
+        console.error('No se pudieron cargar las preguntas');
+      }
+    });
+  </script>
+</body>
+</html>
