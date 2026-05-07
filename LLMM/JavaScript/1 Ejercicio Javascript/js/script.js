@@ -15,7 +15,7 @@ let imagenFondo = document.querySelector(".inicio img");
 const imagenPredeterminada = document.querySelector(".topbar")
 
 imagenPredeterminada.addEventListener("click", () => {
-    imagenFondo.src="img/fondo.png"
+    imagenFondo.src = "img/fondo.png"
 })
 tarjetaProducto[0].addEventListener("click", () => {
     imagenFondo.src = "img/ratong.png"

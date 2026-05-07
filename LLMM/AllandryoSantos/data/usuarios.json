@@ -1,0 +1,52 @@
+{
+  "usuarios": [
+    {
+      "email": "ana.lopez@ejemplo.es",
+      "password": "secr3t01"
+    },
+    {
+      "email": "bruno.sanz@ejemplo.es",
+      "password": "secr3t02"
+    },
+    {
+      "email": "carmen.ruiz@ejemplo.es",
+      "password": "secr3t03"
+    },
+    {
+      "email": "david.mora@ejemplo.es",
+      "password": "secr3t04"
+    },
+    {
+      "email": "elena.paz@ejemplo.es",
+      "password": "secr3t05"
+    },
+    {
+      "email": "felix.tejo@ejemplo.es",
+      "password": "secr3t06"
+    },
+    {
+      "email": "gema.cano@ejemplo.es",
+      "password": "secr3t07"
+    },
+    {
+      "email": "hugo.toro@ejemplo.es",
+      "password": "secr3t08"
+    },
+    {
+      "email": "iris.soto@ejemplo.es",
+      "password": "secr3t09"
+    },
+    {
+      "email": "javier.miel@ejemplo.es",
+      "password": "secr3t10"
+    },
+    {
+      "email": "karen.pina@ejemplo.es",
+      "password": "secr3t11"
+    },
+    {
+      "email": "leo.campos@ejemplo.es",
+      "password": "secr3t12"
+    }
+  ]
+}
