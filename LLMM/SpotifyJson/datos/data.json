@@ -1,4 +1,12 @@
 {
+    "form": [
+        {
+            "nombre":"Iniciar Sesion",
+            "correo": "Correo electrónico",
+            "contraseña":"Contraseña",
+            "botonContinuar":"Continuar"
+        }
+    ],
     "canciones": [
         {
             "titulo": "AL GOLPITO",
