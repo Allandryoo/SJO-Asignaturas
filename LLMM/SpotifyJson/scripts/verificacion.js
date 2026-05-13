@@ -69,7 +69,7 @@ async function mostrarFormulario() {
             errorEmail.textContent = "El correo electrónico no puede estar vacío";
             hayError = true;
         } else if (!regexEmail.test(email)) {
-            errorEmail.textContent = 'El correo debe tener un formato válido (ej: nombre@ejemplo.com)';
+            errorEmail.textContent = 'El correo no es válido';
             hayError = true;
         }
 
