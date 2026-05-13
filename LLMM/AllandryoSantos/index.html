@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examen UF4 · Tienda demo</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <h1 class="logo">Tienda<span>UF4</span></h1>
+      <p id="nav-contexto" class="nav-contexto">&nbsp;</p>
+      <nav>
+        <a href="#" class="nav-enlace">Inicio</a>
+        <a href="#" class="nav-enlace">Catálogo</a>
+        <a href="#" class="nav-enlace">Contacto</a>
+      </nav>
+      <button type="button" id="btn-acceso">Iniciar sesión</button>
+    </div>
+    <p class="aviso">Examen: completa solo <code>app.js</code> y datos JSON pedidos.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="catalogo-title">
+      <h2 id="catalogo-title">Catálogo</h2>
+      <p id="catalogo-estado">Cargando datos…</p>
+      <!-- TODO estudiante: rellenar estas tarjetas desde JSON -->
+      <div id="lista-productos" class="lista-productos"></div>
+    </section>
+  </main>
+
+  <div id="modal-overlay" class="modal-overlay oculto">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <button type="button" id="cerrar-modal" class="modal-cierre" aria-label="Cerrar">×</button>
+      <h3 id="modal-titulo">Acceso a la tienda</h3>
+      <form id="form-login">
+        <div class="campo">
+          <label id="lbl-modal-email" for="modal-email">Correo</label>
+          <input id="modal-email" name="email" type="email" autocomplete="username" />
+          <div class="msg-error-email" data-for="email"></div>
+        </div>
+        <div class="campo">
+          <label id="lbl-modal-password" for="modal-pass">Contraseña</label>
+          <input id="modal-pass" name="password" type="password" autocomplete="current-password" />
+          <span class="msg-error-password" data-for="password"></span>
+        </div>
+        <p id="modal-error-general" class="msg-general" role="alert"></p>
+        <button type="submit" id="modal-submit">Continuar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+
+</html>
