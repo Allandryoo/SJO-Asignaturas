@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios DOM - Texto Cambiante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Ejercicios DOM</title>
-    <style>
-        .estilo {
-            background-color: lightblue; 
-            font-family: Arial;
-            font-size: 20px;
-        }    
-    </style>
 </head>
 <body>
-    <p>Es un texto que cambiara caundo presiones el boton</p>
-    <button id="cambiar">Cambiar texto</button><button id="reset">Reset</button>
+    <main class="card-container">
+        <div class="card">
+            <p id="parrafo-principal">Es un texto que cambiará cuando presiones el botón</p>
+            <div class="button-group">
+                <button id="cambiar" class="btn btn-primary">Cambiar texto</button>
+                <button id="reset" class="btn btn-secondary">Reset</button>
+            </div>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

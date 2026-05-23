@@ -1,0 +1,134 @@
+/* Design System - HSL colors */
+:root {
+    --bg-gradient-start: hsl(220, 25%, 10%);
+    --bg-gradient-end: hsl(220, 30%, 5%);
+    --card-bg: hsla(220, 20%, 15%, 0.7);
+    --card-border: hsla(220, 20%, 30%, 0.3);
+    
+    --primary-color: hsl(260, 85%, 65%);
+    --primary-hover: hsl(260, 95%, 70%);
+    --secondary-color: hsl(220, 15%, 30%);
+    --secondary-hover: hsl(220, 15%, 40%);
+    
+    --text-main: hsl(0, 0%, 95%);
+    --text-muted: hsl(220, 15%, 75%);
+    
+    --accent-glow: hsla(260, 85%, 65%, 0.25);
+    --accent-changed: hsl(150, 80%, 45%);
+    --accent-changed-bg: hsla(150, 80%, 45%, 0.1);
+    --accent-changed-border: hsla(150, 80%, 45%, 0.3);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Layout Container */
+.card-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+}
+
+/* Glassmorphism Card */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 
+                0 0 40px var(--accent-glow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 
+                0 0 50px var(--accent-glow);
+}
+
+/* Paragraph styling */
+#parrafo-principal {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px dashed transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom class applied by JS */
+#parrafo-principal.estilo {
+    color: var(--accent-changed);
+    background: var(--accent-changed-bg);
+    border-color: var(--accent-changed-border);
+    font-weight: 600;
+    font-size: 1.25rem;
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Button styles */
+.btn {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(138, 75, 243, 0.3);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 6px 20px rgba(138, 75, 243, 0.5);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-hover);
+    transform: translateY(-1px);
+}

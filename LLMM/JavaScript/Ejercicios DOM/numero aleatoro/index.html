@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Números Aleatorios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Ejercicios DOM</title>
 </head>
 <body>
-    <h1>Generador de números aleatorios</h1>
-        <ul>
-        
-        </ul>
-        <button>Numero aleatorio</button>
+    <main class="card-container">
+        <div class="card">
+            <h1 class="card-title">Generador de Números</h1>
+            <div class="list-container">
+                <ul id="lista-numeros" class="numbers-list">
+                    <!-- Los números aleatorios se insertarán aquí -->
+                </ul>
+            </div>
+            <button id="btn-generar" class="btn btn-primary">Generar número</button>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,156 @@
+/* Design System - HSL colors */
+:root {
+    --bg-gradient-start: hsl(230, 25%, 10%);
+    --bg-gradient-end: hsl(230, 30%, 5%);
+    --card-bg: hsla(230, 20%, 15%, 0.7);
+    --card-border: hsla(230, 20%, 30%, 0.3);
+    
+    --primary-color: hsl(330, 85%, 60%);
+    --primary-hover: hsl(330, 95%, 65%);
+    
+    --text-main: hsl(0, 0%, 95%);
+    --text-muted: hsl(230, 15%, 75%);
+    
+    --accent-glow: hsla(330, 85%, 60%, 0.25);
+    
+    --list-item-bg: hsla(230, 20%, 25%, 0.5);
+    --list-item-border: hsla(230, 20%, 40%, 0.2);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Layout Container */
+.card-container {
+    width: 100%;
+    max-width: 440px;
+    padding: 20px;
+}
+
+/* Glassmorphism Card */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 24px;
+    padding: 35px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 
+                0 0 40px var(--accent-glow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 
+                0 0 50px var(--accent-glow);
+}
+
+/* Title */
+.card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #ff79c6, #bd93f9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* List Container (Scrollable) */
+.list-container {
+    max-height: 220px;
+    overflow-y: auto;
+    margin-bottom: 25px;
+    padding-right: 5px;
+    border-radius: 12px;
+}
+
+/* Custom Scrollbar */
+.list-container::-webkit-scrollbar {
+    width: 6px;
+}
+.list-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+.list-container::-webkit-scrollbar-thumb {
+    background: hsla(230, 20%, 35%, 0.6);
+    border-radius: 3px;
+}
+
+/* Numbers List */
+.numbers-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Number Item (animated entry) */
+.number-item {
+    background: var(--list-item-bg);
+    border: 1px solid var(--list-item-border);
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Animation */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Button styles */
+.btn {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    width: 100%;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 121, 198, 0.2);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 6px 20px rgba(255, 121, 198, 0.4);
+}
